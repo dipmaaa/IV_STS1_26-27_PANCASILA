@@ -3,2035 +3,1443 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ujian Online Kelas IV</title>
+<title>STS Gasal Pendidikan Pancasila Kelas IV</title>
 
 <style>
-:root{
-  --navy:#183B56;
-  --blue:#2F6690;
-  --sky:#E7F0F5;
-  --gold:#B8941F;
-  --white:#fff;
-  --text:#263238;
-  --muted:#667780;
-  --border:#D7E0E5;
-  --green:#3F7D58;
-  --red:#B84A4A;
-}
-
 *{
-  box-sizing:border-box;
+    box-sizing:border-box;
 }
 
 body{
-  margin:0;
-  font-family:"Segoe UI",Arial,sans-serif;
-  color:var(--text);
-  background:linear-gradient(135deg,#EEF5F8,#F7F4ED);
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#eef2f7;
+    color:#172033;
 }
 
-.topbar{
-  background:var(--navy);
-  color:#fff;
-  padding:18px 24px;
-  box-shadow:0 3px 12px #0002;
+.container{
+    max-width:950px;
+    margin:25px auto;
+    padding:0 15px;
+}
+
+/* ================= KOP ================= */
+
+.header{
+    background:#102a43;
+    border-radius:14px;
+    overflow:hidden;
+    margin-bottom:20px;
+    box-shadow:0 6px 20px rgba(0,0,0,.12);
 }
 
 .brand{
-  max-width:1050px;
-  margin:auto;
-  display:flex;
-  align-items:center;
-  gap:14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:25px;
+    padding:18px 25px;
+    border-bottom:4px solid #d4af37;
 }
 
-.logo{
-  width:46px;
-  height:46px;
-  border-radius:12px;
-  background:var(--gold);
-  display:grid;
-  place-items:center;
-  font-size:23px;
+.logo-img{
+    width:72px;
+    height:72px;
+    object-fit:contain;
+    flex-shrink:0;
 }
 
-.brand h1{
-  font-size:21px;
-  margin:0;
+.header-title{
+    text-align:center;
+    flex:1;
+    color:white;
 }
 
-.brand p{
-  margin:3px 0 0;
-  color:#DCEAF4;
-  font-size:13px;
+.header-title h1{
+    margin:0;
+    font-size:22px;
+    letter-spacing:.5px;
 }
 
-main{
-  max-width:1050px;
-  margin:26px auto;
-  padding:0 16px;
+.header-title h2{
+    margin:6px 0;
+    font-size:18px;
+    font-weight:bold;
 }
+
+.header-title p{
+    margin:0;
+    font-size:14px;
+    color:#e8edf3;
+}
+
+/* ================= CARD ================= */
 
 .card{
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:18px;
-  padding:24px;
-  box-shadow:0 8px 24px #183b5612;
-  margin-bottom:18px;
+    background:white;
+    border-radius:16px;
+    padding:25px;
+    margin-bottom:20px;
+    box-shadow:0 4px 18px rgba(0,0,0,.07);
 }
 
-.hero{
-  border-top:5px solid var(--gold);
+.welcome{
+    text-align:center;
 }
 
-h2{
-  color:var(--navy);
-  margin-top:0;
+.welcome h2{
+    margin-top:0;
+    color:#102a43;
 }
 
-label{
-  font-weight:600;
-  display:block;
-  margin:12px 0 7px;
+#welcomeName{
+    color:#1769aa;
+}
+
+/* ================= INFO ================= */
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+    margin:20px 0;
+}
+
+.info-box{
+    background:#f3f6fa;
+    border:1px solid #e1e7ee;
+    border-radius:12px;
+    padding:15px;
+    text-align:center;
+}
+
+.info-box strong{
+    display:block;
+    font-size:24px;
+    color:#102a43;
+}
+
+.info-box span{
+    font-size:13px;
+    color:#666;
+}
+
+/* ================= FORM ================= */
+
+.form-group{
+    margin-bottom:17px;
+}
+
+.form-group label{
+    display:block;
+    font-weight:bold;
+    margin-bottom:7px;
 }
 
 input,
+select,
 textarea{
-  width:100%;
-  padding:12px 13px;
-  border:1px solid #C8D3DA;
-  border-radius:10px;
-  font:inherit;
-  outline:none;
-  background:#fff;
+    width:100%;
+    padding:12px 14px;
+    border:1px solid #ccd5df;
+    border-radius:9px;
+    font-size:15px;
+    font-family:inherit;
 }
 
-input:focus,
-textarea:focus{
-  border-color:var(--blue);
-  box-shadow:0 0 0 3px #2f669020;
+input[readonly],
+select:disabled{
+    background:#f1f3f5;
+    color:#333;
 }
 
-textarea{
-  min-height:110px;
-  resize:vertical;
-}
+/* ================= BUTTON ================= */
 
 .btn{
-  border:0;
-  border-radius:11px;
-  padding:12px 18px;
-  font-weight:700;
-  cursor:pointer;
-  font-size:15px;
+    border:none;
+    padding:13px 25px;
+    border-radius:9px;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
 }
 
-.primary{
-  background:var(--navy);
-  color:#fff;
+.btn-primary{
+    background:#102a43;
+    color:white;
 }
 
-.secondary{
-  background:var(--sky);
-  color:var(--navy);
+.btn-primary:hover{
+    background:#0b2033;
 }
 
-.gold{
-  background:var(--gold);
-  color:#fff;
+.btn-success{
+    background:#18794e;
+    color:white;
 }
 
-.hidden{
-  display:none!important;
+.btn-success:hover{
+    background:#12613e;
 }
 
-.info-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:12px;
-  margin:18px 0;
+/* ================= PROGRESS ================= */
+
+.progress-area{
+    margin-bottom:20px;
 }
 
-.info{
-  background:#F5F8FA;
-  border:1px solid var(--border);
-  border-radius:12px;
-  padding:14px;
-  text-align:center;
+.progress-info{
+    display:flex;
+    justify-content:space-between;
+    font-size:14px;
+    margin-bottom:7px;
 }
 
-.info strong{
-  display:block;
-  font-size:21px;
-  color:var(--navy);
+.progress-bar{
+    width:100%;
+    height:9px;
+    background:#dce3ea;
+    border-radius:10px;
+    overflow:hidden;
 }
 
-.info span{
-  font-size:12px;
-  color:var(--muted);
+.progress-fill{
+    height:100%;
+    width:0%;
+    background:#102a43;
+    transition:.3s;
 }
 
-.section-title{
-  margin:28px 0 14px;
-  padding:10px 14px;
-  border-radius:10px;
-  background:var(--sky);
-  color:var(--navy);
-  font-weight:800;
-}
+/* ================= SOAL ================= */
 
 .question{
-  padding:18px;
-  border:1px solid var(--border);
-  border-radius:13px;
-  margin:12px 0;
-  background:#FCFDFD;
+    background:#f8fafc;
+    border:1px solid #e0e6ed;
+    border-radius:12px;
+    padding:18px;
+    margin-bottom:17px;
 }
 
-.qtext{
-  font-weight:700;
-  margin-bottom:13px;
-  line-height:1.5;
-}
-
-.question-text{
-  white-space:normal;
-  line-height:1.7;
-  flex:1;
+.question-title{
+    font-weight:bold;
+    margin-bottom:13px;
+    line-height:1.6;
 }
 
 .option{
-  display:flex;
-  gap:9px;
-  align-items:flex-start;
-  padding:8px;
-  border-radius:8px;
-  cursor:pointer;
+    display:block;
+    padding:9px 10px;
+    margin:5px 0;
+    border-radius:7px;
+    cursor:pointer;
 }
 
 .option:hover{
-  background:#F1F6F8;
+    background:#edf2f7;
 }
 
 .option input{
-  width:auto;
-  margin-top:4px;
+    width:auto;
+    margin-right:8px;
 }
 
-.number{
-  display:inline-grid;
-  place-items:center;
-  width:28px;
-  height:28px;
-  border-radius:50%;
-  background:var(--navy);
-  color:#fff;
-  font-size:13px;
-  margin-right:8px;
-}
+/* ================= HASIL ================= */
 
-.progress-wrap{
-  position:sticky;
-  top:0;
-  z-index:5;
-  background:#ffffffee;
-  backdrop-filter:blur(8px);
-  padding:10px 0;
-}
-
-.progress{
-  height:8px;
-  background:#E5EAED;
-  border-radius:99px;
-  overflow:hidden;
-}
-
-.progress>div{
-  height:100%;
-  width:0;
-  background:var(--gold);
-  transition:.2s;
-}
-
-.footer-actions{
-  display:flex;
-  justify-content:space-between;
-  gap:10px;
-  margin-top:22px;
-}
-
-.result{
-  text-align:center;
+.result-box{
+    text-align:center;
 }
 
 .score{
-  width:150px;
-  height:150px;
-  border-radius:50%;
-  background:var(--navy);
-  color:#fff;
-  margin:15px auto;
-  display:grid;
-  place-items:center;
-  font-size:45px;
-  font-weight:800;
-  border:8px solid #DCEAF4;
+    font-size:55px;
+    font-weight:bold;
+    color:#102a43;
+    margin:10px 0;
 }
 
-.result-message{
-  font-size:19px;
-  font-weight:700;
-  color:var(--green);
+.result-detail{
+    background:#f4f7fa;
+    border-radius:12px;
+    padding:18px;
+    margin-top:20px;
 }
 
-.review{
-  margin-top:20px;
-  text-align:left;
+.result-detail p{
+    margin:8px 0;
 }
 
 .review-item{
-  padding:13px;
-  border-radius:10px;
-  margin:8px 0;
-  background:#F7F9FA;
-  border-left:4px solid var(--border);
+    border:1px solid #dce3ea;
+    border-radius:10px;
+    padding:15px;
+    margin-bottom:12px;
 }
 
 .correct{
-  border-left-color:var(--green);
+    color:#18794e;
+    font-weight:bold;
 }
 
 .wrong{
-  border-left-color:var(--red);
+    color:#c0392b;
+    font-weight:bold;
 }
 
-.small{
-  font-size:12px;
-  color:var(--muted);
+/* ================= PAGE ================= */
+
+.page{
+    display:none;
 }
 
-.teacher-note{
-  background:#FFF9E8;
-  border:1px solid #E8D99B;
-  border-radius:12px;
-  padding:14px;
-  font-size:13px;
+.page.active{
+    display:block;
 }
 
-@media(max-width:700px){
-  .info-grid{
-    grid-template-columns:1fr;
-  }
+/* ================= MOBILE ================= */
 
-  .card{
-    padding:17px;
-  }
+@media(max-width:650px){
 
-  .footer-actions{
-    flex-direction:column;
-  }
+    .container{
+        margin-top:10px;
+    }
 
-  .btn{
-    width:100%;
-  }
+    .brand{
+        gap:8px;
+        padding:15px 10px;
+    }
+
+    .logo-img{
+        width:55px;
+        height:55px;
+    }
+
+    .header-title h1{
+        font-size:15px;
+    }
+
+    .header-title h2{
+        font-size:13px;
+    }
+
+    .header-title p{
+        font-size:10px;
+    }
+
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+
+    .card{
+        padding:18px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<header class="topbar">
-  <div class="brand">
-    <div class="logo">✦</div>
-    <div>
-      <h1 id="headerTitle">Sumatif Tengah Semester Gasal</h1>
-      <p>Kelas IV • SDN 1 Sendangrejo • Tahun Pelajaran 2026/2027</p>
-    </div>
-  </div>
-</header>
+<div class="container">
 
-<main>
+<!-- ================= KOP ================= -->
 
-<section id="startPage" class="card hero">
+<div class="header">
 
-  <div style="text-align:center;margin-bottom:20px">
-    <h2 style="margin-bottom:8px">Sumatif Tengah Semester Gasal</h2>
+    <div class="brand">
 
-    <div
-      style="font-weight:700;color:var(--navy);font-size:17px"
-      id="subjectTitle">
-      Pendidikan Pancasila
-    </div>
+        <img
+            src="logo-lamongan.png"
+            class="logo-img"
+            alt="Logo Lamongan"
+        >
 
-    <div
-      class="small"
-      style="margin-top:5px">
-      Kelas IV SDN 1 Sendangrejo • Tahun Pelajaran 2026/2027
-    </div>
-  </div>
+        <div class="header-title">
 
-  <h2 id="welcomeTitle" style="font-size:20px">
-    Selamat Datang!
-  </h2>
+            <h1>SUMATIF TENGAH SEMESTER GASAL</h1>
 
-  <p>
-    Silakan isi identitas dan kerjakan seluruh soal dengan teliti dan jujur.
-  </p>
+            <h2>SDN 1 SENDANGREJO</h2>
 
-  <div class="info-grid">
-    <div class="info">
-      <strong>15</strong>
-      <span>Pilihan Ganda</span>
-    </div>
+            <p>TAHUN PELAJARAN 2026/2027</p>
 
-    <div class="info">
-      <strong>10</strong>
-      <span>Isian Singkat</span>
-    </div>
+        </div>
 
-    <div class="info">
-      <strong>5</strong>
-      <span>Uraian</span>
-    </div>
-  </div>
-
-  <label for="studentName">Nama Siswa</label>
-
-  <input
-    id="studentName"
-    placeholder="Tulis nama lengkap..."
-    autocomplete="off"
-    oninput="updateWelcome()">
-
-  <label for="studentClass">Kelas</label>
-
-  <input
-    id="studentClass"
-    value="IV"
-    readonly>
-
-  <br>
-
-  <button
-    class="btn primary"
-    onclick="startExam()">
-    Mulai Ujian
-  </button>
-
-</section>
-
-
-<section id="examPage" class="hidden">
-
-  <div class="progress-wrap">
-
-    <div
-      style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px">
-
-      <span id="progressText">
-        0/30 soal terjawab
-      </span>
-
-      <b id="examSubject"></b>
+        <img
+            src="logo-sekolah.png"
+            class="logo-img"
+            alt="Logo SDN 1 Sendangrejo"
+        >
 
     </div>
 
-    <div class="progress">
-      <div id="progressBar"></div>
-    </div>
-
-  </div>
+</div>
 
 
-  <form
-    id="examForm"
-    class="card"
-    onsubmit="return false">
+<!-- ===================================================== -->
+<!-- HALAMAN AWAL -->
+<!-- ===================================================== -->
 
-    <div id="questions"></div>
+<div id="startPage" class="page active">
 
-    <div class="footer-actions">
+    <div class="card welcome">
 
-      <button
-        type="button"
-        class="btn secondary"
-        onclick="scrollToTop()">
-        Kembali ke Atas
-      </button>
+        <h2>
+            Selamat Datang,
+            <span id="welcomeName">Peserta Didik!</span>
+        </h2>
 
-      <button
-        type="button"
-        class="btn gold"
-        onclick="finishExam()">
-        Kumpulkan Jawaban
-      </button>
+        <p>
+            Silakan pilih nomor absen untuk melanjutkan ujian.
+        </p>
 
     </div>
 
-  </form>
 
-</section>
+    <div class="card">
+
+        <div class="info-grid">
+
+            <div class="info-box">
+                <strong>15</strong>
+                <span>Pilihan Ganda</span>
+            </div>
+
+            <div class="info-box">
+                <strong>10</strong>
+                <span>Isian Singkat</span>
+            </div>
+
+            <div class="info-box">
+                <strong>5</strong>
+                <span>Uraian</span>
+            </div>
+
+        </div>
 
 
-<section id="resultPage" class="card result hidden">
+        <!-- NO ABSEN -->
 
-  <h2>Hasil Ujian</h2>
+        <div class="form-group">
 
-  <div
-    style="font-weight:700;color:var(--navy);margin-bottom:6px">
-    Sumatif Tengah Semester Gasal
-  </div>
+            <label for="absen">
+                No. Absen
+            </label>
 
-  <div
-    class="small"
-    style="margin-bottom:12px">
-    Kelas IV SDN 1 Sendangrejo • Tahun Pelajaran 2026/2027
-  </div>
+            <select id="absen" onchange="pilihAbsen()">
 
-  <p id="resultStudent"></p>
+                <option value="">
+                    -- Pilih No. Absen --
+                </option>
 
-  <div class="score" id="score">0</div>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
 
-  <div
-    class="result-message"
-    id="resultMessage">
-  </div>
+            </select>
 
-  <p id="detailScore"></p>
+        </div>
 
-  <div
-    class="review"
-    id="review">
-  </div>
 
-  <br>
+        <!-- NAMA OTOMATIS -->
 
-  <button
-    class="btn primary"
-    onclick="location.reload()">
-    Kembali ke Halaman Awal
-  </button>
+        <div class="form-group">
 
-</section>
+            <label for="nama">
+                Nama Lengkap
+            </label>
 
-</main>
+            <input
+                type="text"
+                id="nama"
+                readonly
+                placeholder="Nama akan muncul otomatis"
+            >
+
+        </div>
+
+
+        <!-- KELAS -->
+
+        <div class="form-group">
+
+            <label for="kelas">
+                Kelas / Fase
+            </label>
+
+            <select id="kelas" disabled>
+
+                <option value="IV / B">
+                    IV / B
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- MAPEL -->
+
+        <div class="form-group">
+
+            <label for="mapel">
+                Mata Pelajaran
+            </label>
+
+            <select id="mapel" disabled>
+
+                <option value="Pendidikan Pancasila">
+                    Pendidikan Pancasila
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div style="text-align:center;margin-top:25px;">
+
+            <button
+                class="btn btn-primary"
+                onclick="mulaiUjian()"
+            >
+                MULAI UJIAN
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ===================================================== -->
+<!-- HALAMAN UJIAN -->
+<!-- ===================================================== -->
+
+<div id="examPage" class="page">
+
+<div class="card">
+
+<div class="progress-area">
+
+    <div class="progress-info">
+
+        <span id="progressText">
+            0 / 30 soal terjawab
+        </span>
+
+        <span>
+            Progress
+        </span>
+
+    </div>
+
+    <div class="progress-bar">
+
+        <div
+            id="progressFill"
+            class="progress-fill"
+        ></div>
+
+    </div>
+
+</div>
+
+
+<form id="examForm">
+
+
+<!-- ===================================================== -->
+<!-- PILIHAN GANDA -->
+
+<h2>Pilihan Ganda</h2>
+
+<div class="question"><div class="question-title">1. Dalam sidang BPUPKI, para tokoh menyampaikan gagasan tentang dasar negara. Sikap yang dapat kita teladani adalah ....</div>
+<label class="option"><input type="radio" name="q1" value="A"> A. mengutamakan kepentingan pribadi</label>
+<label class="option"><input type="radio" name="q1" value="B"> B. mengutamakan persatuan dan kepentingan bangsa</label>
+<label class="option"><input type="radio" name="q1" value="C"> C. memaksakan pendapat sendiri</label>
+<label class="option"><input type="radio" name="q1" value="D"> D. menghindari pembahasan bersama</label></div>
+
+<div class="question"><div class="question-title">2. Perhatikan pernyataan berikut!<br>1) Mempersiapkan hal-hal yang berkaitan dengan kemerdekaan Indonesia<br>2) Membahas dasar negara<br>3) Melanjutkan tugas setelah BPUPKI dibubarkan<br>4) Mengesahkan UUD 1945<br>Pernyataan yang berkaitan dengan PPKI adalah ....</div>
+<label class="option"><input type="radio" name="q2" value="A"> A. 1 dan 2</label>
+<label class="option"><input type="radio" name="q2" value="B"> B. 1 dan 3</label>
+<label class="option"><input type="radio" name="q2" value="C"> C. 2 dan 3</label>
+<label class="option"><input type="radio" name="q2" value="D"> D. 3 dan 4</label></div>
+
+<div class="question"><div class="question-title">3. Tokoh yang menyampaikan gagasan tentang dasar negara dalam sidang BPUPKI adalah ....</div>
+<label class="option"><input type="radio" name="q3" value="A"> A. Moh. Yamin, Soepomo, dan Ir. Soekarno</label>
+<label class="option"><input type="radio" name="q3" value="B"> B. Moh. Hatta, Ahmad Soebardjo, dan Ki Hajar Dewantara</label>
+<label class="option"><input type="radio" name="q3" value="C"> C. Jenderal Sudirman, Moh. Hatta, dan Soepomo</label>
+<label class="option"><input type="radio" name="q3" value="D"> D. Ki Hajar Dewantara, Moh. Yamin, dan Moh. Hatta</label></div>
+
+<div class="question"><div class="question-title">4. Tujuan para tokoh menyampaikan gagasan tentang dasar negara dalam sidang BPUPKI adalah ....</div>
+<label class="option"><input type="radio" name="q4" value="A"> A. memilih presiden Indonesia</label>
+<label class="option"><input type="radio" name="q4" value="B"> B. merumuskan dasar negara Indonesia</label>
+<label class="option"><input type="radio" name="q4" value="C"> C. membuat aturan sekolah</label>
+<label class="option"><input type="radio" name="q4" value="D"> D. menentukan pembagian wilayah</label></div>
+
+<div class="question"><div class="question-title">5. Panitia Sembilan dibentuk untuk membantu merumuskan dasar negara. Hasil penting dari Panitia Sembilan adalah ....</div>
+<label class="option"><input type="radio" name="q5" value="A"> A. Piagam Jakarta</label>
+<label class="option"><input type="radio" name="q5" value="B"> B. Sumpah Pemuda</label>
+<label class="option"><input type="radio" name="q5" value="C"> C. Proklamasi Kemerdekaan</label>
+<label class="option"><input type="radio" name="q5" value="D"> D. Dekrit Presiden</label></div>
+
+<div class="question"><div class="question-title">6. Perbedaan peran BPUPKI dan PPKI yang tepat adalah ....</div>
+<label class="option"><input type="radio" name="q6" value="A"> A. BPUPKI dibentuk setelah PPKI</label>
+<label class="option"><input type="radio" name="q6" value="B"> B. BPUPKI membahas persiapan kemerdekaan, sedangkan PPKI melanjutkan tugas setelah BPUPKI</label>
+<label class="option"><input type="radio" name="q6" value="C"> C. BPUPKI bertugas membuat peraturan sekolah</label>
+<label class="option"><input type="radio" name="q6" value="D"> D. PPKI hanya membahas pendidikan</label></div>
+
+<div class="question"><div class="question-title">7. Piagam Jakarta memiliki hubungan penting dengan Pancasila karena ....</div>
+<label class="option"><input type="radio" name="q7" value="A"> A. menjadi teks Proklamasi</label>
+<label class="option"><input type="radio" name="q7" value="B"> B. menjadi salah satu bahan penting dalam proses perumusan Pancasila</label>
+<label class="option"><input type="radio" name="q7" value="C"> C. menjadi nama organisasi pemuda</label>
+<label class="option"><input type="radio" name="q7" value="D"> D. menjadi lagu kebangsaan</label></div>
+
+<div class="question"><div class="question-title">8. Aturan yang dibuat secara resmi dan biasanya berbentuk dokumen disebut aturan ....</div>
+<label class="option"><input type="radio" name="q8" value="A"> A. tidak tertulis</label>
+<label class="option"><input type="radio" name="q8" value="B"> B. pribadi</label>
+<label class="option"><input type="radio" name="q8" value="C"> C. tertulis</label>
+<label class="option"><input type="radio" name="q8" value="D"> D. bebas</label></div>
+
+<div class="question"><div class="question-title">9. Contoh aturan tidak tertulis dalam kehidupan sehari-hari adalah ....</div>
+<label class="option"><input type="radio" name="q9" value="A"> A. tata tertib sekolah</label>
+<label class="option"><input type="radio" name="q9" value="B"> B. undang-undang</label>
+<label class="option"><input type="radio" name="q9" value="C"> C. menghormati orang yang lebih tua</label>
+<label class="option"><input type="radio" name="q9" value="D"> D. jadwal pelajaran</label></div>
+
+<div class="question"><div class="question-title">10. Rani melihat temannya membuang sampah sembarangan di kelas. Sikap Rani yang sesuai aturan adalah ....</div>
+<label class="option"><input type="radio" name="q10" value="A"> A. membiarkannya</label>
+<label class="option"><input type="radio" name="q10" value="B"> B. ikut membuang sampah sembarangan</label>
+<label class="option"><input type="radio" name="q10" value="C"> C. mengingatkan temannya untuk membuang sampah pada tempatnya</label>
+<label class="option"><input type="radio" name="q10" value="D"> D. mengejek temannya</label></div>
+
+<div class="question"><div class="question-title">11. Contoh kewajiban seorang siswa di sekolah adalah ....</div>
+<label class="option"><input type="radio" name="q11" value="A"> A. menaati tata tertib sekolah</label>
+<label class="option"><input type="radio" name="q11" value="B"> B. mendapat nilai tinggi tanpa belajar</label>
+<label class="option"><input type="radio" name="q11" value="C"> C. menggunakan fasilitas sekolah sesuka hati</label>
+<label class="option"><input type="radio" name="q11" value="D"> D. meminta semua keinginannya dipenuhi</label></div>
+
+<div class="question"><div class="question-title">12. Salah satu hak anak di rumah adalah ....</div>
+<label class="option"><input type="radio" name="q12" value="A"> A. membantu orang tua</label>
+<label class="option"><input type="radio" name="q12" value="B"> B. mendapatkan kasih sayang dari keluarga</label>
+<label class="option"><input type="radio" name="q12" value="C"> C. merapikan kamar</label>
+<label class="option"><input type="radio" name="q12" value="D"> D. menaati aturan keluarga</label></div>
+
+<div class="question"><div class="question-title">13. Hak dan kewajiban sebaiknya dilakukan secara seimbang. Contohnya adalah ....</div>
+<label class="option"><input type="radio" name="q13" value="A"> A. menuntut hak tetapi tidak mau menjalankan kewajiban</label>
+<label class="option"><input type="radio" name="q13" value="B"> B. belajar dengan sungguh-sungguh dan mendapatkan hak untuk belajar dengan nyaman</label>
+<label class="option"><input type="radio" name="q13" value="C"> C. menggunakan fasilitas sekolah sesuka hati</label>
+<label class="option"><input type="radio" name="q13" value="D"> D. meminta hak orang lain</label></div>
+
+<div class="question"><div class="question-title">14. Jika setiap anggota keluarga menjalankan kewajibannya, keadaan di rumah akan menjadi ....</div>
+<label class="option"><input type="radio" name="q14" value="A"> A. tidak teratur</label>
+<label class="option"><input type="radio" name="q14" value="B"> B. lebih tertib dan nyaman</label>
+<label class="option"><input type="radio" name="q14" value="C"> C. penuh pertengkaran</label>
+<label class="option"><input type="radio" name="q14" value="D"> D. semakin sulit</label></div>
+
+<div class="question"><div class="question-title">15. Ketika mengikuti musyawarah, pendapat kita berbeda dengan pendapat teman. Sikap yang tepat adalah ....</div>
+<label class="option"><input type="radio" name="q15" value="A"> A. memaksakan pendapat</label>
+<label class="option"><input type="radio" name="q15" value="B"> B. meninggalkan musyawarah</label>
+<label class="option"><input type="radio" name="q15" value="C"> C. menghargai pendapat dan mencari kesepakatan bersama</label>
+<label class="option"><input type="radio" name="q15" value="D"> D. marah kepada teman</label></div>
+
+<h2>Isian Singkat</h2>
+<div class="question"><div class="question-title">16. Badan yang dibentuk untuk mempersiapkan kemerdekaan Indonesia dan membahas dasar negara adalah ....</div><input type="text" name="q16"></div>
+<div class="question"><div class="question-title">17. Badan yang melanjutkan tugas BPUPKI setelah dibubarkan adalah ....</div><input type="text" name="q17"></div>
+<div class="question"><div class="question-title">18. Panitia yang beranggotakan sembilan orang dan merumuskan Piagam Jakarta disebut Panitia ....</div><input type="text" name="q18"></div>
+<div class="question"><div class="question-title">19. Hasil penting dari Panitia Sembilan adalah ....</div><input type="text" name="q19"></div>
+<div class="question"><div class="question-title">20. Dasar negara Indonesia adalah ....</div><input type="text" name="q20"></div>
+<div class="question"><div class="question-title">21. Aturan yang dibuat secara resmi dan biasanya memiliki bentuk dokumen disebut aturan ....</div><input type="text" name="q21"></div>
+<div class="question"><div class="question-title">22. Aturan yang tidak dibuat dalam bentuk tulisan tetapi tetap dipatuhi disebut aturan ....</div><input type="text" name="q22"></div>
+<div class="question"><div class="question-title">23. Sesuatu yang seharusnya kita terima disebut ....</div><input type="text" name="q23"></div>
+<div class="question"><div class="question-title">24. Sesuatu yang harus kita lakukan dengan penuh tanggung jawab disebut ....</div><input type="text" name="q24"></div>
+<div class="question"><div class="question-title">25. Mematuhi tata tertib dan mengerjakan tugas merupakan contoh kewajiban di ....</div><input type="text" name="q25"></div>
+
+<h2>Uraian</h2>
+<div class="question"><div class="question-title">26. Mengapa para tokoh perumus Pancasila perlu mengutamakan persatuan dan kepentingan bangsa? Jelaskan!</div><textarea name="q26" rows="5"></textarea></div>
+<div class="question"><div class="question-title">27. Jelaskan peran BPUPKI dan PPKI dalam proses persiapan kemerdekaan Indonesia!</div><textarea name="q27" rows="5"></textarea></div>
+<div class="question"><div class="question-title">28. Mengapa kita harus menjalankan kewajiban sebelum menuntut hak? Berikan satu contoh dalam kehidupan sehari-hari!</div><textarea name="q28" rows="5"></textarea></div>
+<div class="question"><div class="question-title">29. Jelaskan mengapa aturan perlu dipatuhi di sekolah!</div><textarea name="q29" rows="5"></textarea></div>
+<div class="question"><div class="question-title">30. Jelaskan hubungan antara hak dan kewajiban dalam kehidupan sehari-hari. Berikan satu contoh!</div><textarea name="q30" rows="6"></textarea></div>
+
+<div style="text-align:center;margin-top:30px;">
+<button type="button" class="btn btn-success" onclick="kumpulkanUjian()">KUMPULKAN JAWABAN</button>
+</div>
+</form>
+</div>
+</div>
+
+<!-- HASIL -->
+<!-- ===================================================== -->
+
+<div id="resultPage" class="page">
+
+<div class="card result-box">
+
+<h2>Ujian Selesai 🎉</h2>
+
+<p id="resultName"></p>
+
+<div class="score" id="finalScore">
+0
+</div>
+
+<p>Nilai Akhir</p>
+
+<div class="result-detail">
+
+<p>
+<strong>Benar Pilihan Ganda:</strong>
+<span id="pgBenar"></span> / 15
+</p>
+
+<p>
+<strong>Benar Isian:</strong>
+<span id="isianBenar"></span> / 10
+</p>
+
+<p>
+<strong>Poin Uraian:</strong>
+<span id="uraianPoin"></span> / 30
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>Review Jawaban</h2>
+
+<div id="review"></div>
+
+</div>
+
+</div>
+
+</div>
 
 
 <script>
 
-/* ==========================================================
-   PENGATURAN UJIAN
-   ========================================================== */
-
-const NAMA_MAPEL = "Pendidikan Pancasila";
-
-
-/*
-  FORMspree
-  Tempel endpoint Formspree milik Ibu di sini.
-*/
+/* =========================================================
+FORM SPREE
+========================================================= */
 
 const FORMSPREE_ENDPOINT =
-  "https://formspree.io/f/mljdrwrz";
+"https://formspree.io/f/mljdrwrz";
 
 
-/*
-  Bobot nilai:
-  PG     = 40 poin
-  Isian  = 30 poin
-  Uraian = 30 poin
-  Total  = 100
-*/
+/* =========================================================
+DATA SISWA
+========================================================= */
 
+const siswa = {
 
-const DATA_SOAL = {
+"1":"Achmad Naufal Putra Yulianto",
 
-  /* ========================================================
-     PILIHAN GANDA
-     ======================================================== */
+"2":"Aldo Syarul Ramdhan",
 
-  pilihanGanda: [
+"3":"Danish Raffa Faizan",
 
-    {
-      q:"Dalam sidang BPUPKI, para tokoh menyampaikan gagasan tentang dasar negara. Walaupun pendapat mereka berbeda, mereka tetap berdiskusi dengan baik. Sikap tersebut menunjukkan bahwa para tokoh mengutamakan ....",
+"4":"Fabian Arrafif",
 
-      options:[
-        "kepentingan pribadi",
-        "persatuan dan kepentingan bangsa",
-        "pendapat kelompok sendiri",
-        "kemenangan dalam berdiskusi"
-      ],
+"5":"Meli Anggraini",
 
-      answer:"B"
-    },
+"6":"Muhammad Daffa Al Baihaqi",
 
+"7":"Nadhira Azkadina Putri",
 
-    {
-      q:`Perhatikan pernyataan berikut!
+"8":"Nur Azizah",
 
-1. Mempersiapkan hal-hal yang berkaitan dengan kemerdekaan Indonesia
-2. Membahas dasar negara
-3. Melanjutkan tugas setelah BPUPKI dibubarkan
-4. Mengesahkan UUD 1945
+"9":"Raffasya Ali Alfarizqi",
 
-Pernyataan yang berkaitan dengan PPKI adalah ....`,
-
-      options:[
-        "1 dan 2",
-        "1 dan 3",
-        "2 dan 3",
-        "3 dan 4"
-      ],
-
-      answer:"D"
-    },
-
-
-    {
-      q:`Perhatikan tokoh-tokoh berikut!
-
-- Moh. Yamin
-- Soepomo
-- Ir. Soekarno
-
-Tokoh-tokoh tersebut memiliki peran penting dalam proses ....`,
-
-      options:[
-        "perumusan dasar negara",
-        "pembentukan sekolah",
-        "pembangunan gedung BPUPKI",
-        "penyusunan jadwal sekolah"
-      ],
-
-      answer:"A"
-    },
-
-
-    {
-      q:"Panitia Sembilan dibentuk untuk membantu merumuskan dasar negara. Hasil penting dari Panitia Sembilan adalah ....",
-
-      options:[
-        "Proklamasi Kemerdekaan",
-        "Piagam Jakarta",
-        "Sumpah Pemuda",
-        "UUDS 1950"
-      ],
-
-      answer:"B"
-    },
-
-
-    {
-      q:"Piagam Jakarta menjadi salah satu bagian penting dalam sejarah perumusan Pancasila karena ....",
-
-      options:[
-        "berisi rancangan awal rumusan dasar negara",
-        "merupakan teks Proklamasi",
-        "berisi aturan sekolah",
-        "menjadi undang-undang pertama Indonesia"
-      ],
-
-      answer:"A"
-    },
-
-
-    {
-      q:"Rumusan Pancasila mengalami perubahan sebelum disahkan sebagai dasar negara. Hal tersebut menunjukkan bahwa para tokoh ....",
-
-      options:[
-        "tidak memiliki pendirian",
-        "lebih mementingkan kepentingan bangsa dan persatuan",
-        "ingin menghapus dasar negara",
-        "tidak menyukai hasil musyawarah"
-      ],
-
-      answer:"B"
-    },
-
-
-    {
-      q:"Setelah BPUPKI dibubarkan, dibentuklah PPKI. Jika kamu menjadi anggota PPKI, sikap yang paling tepat dalam menjalankan tugas adalah ....",
-
-      options:[
-        "memaksakan pendapat sendiri",
-        "mengutamakan kepentingan bangsa",
-        "mengikuti pendapat teman tanpa berpikir",
-        "menolak semua hasil pembahasan sebelumnya"
-      ],
-
-      answer:"B"
-    },
-
-
-    {
-      q:"Di rumah, Rani selalu merapikan tempat tidur setelah bangun. Aturan tersebut termasuk aturan ....",
-
-      options:[
-        "di sekolah",
-        "di masyarakat",
-        "di rumah",
-        "negara"
-      ],
-
-      answer:"C"
-    },
-
-
-    {
-      q:"Contoh aturan tidak tertulis di masyarakat adalah ....",
-
-      options:[
-        "memakai seragam sesuai jadwal",
-        "membayar pajak sesuai ketentuan",
-        "menghormati tetangga yang sedang berbicara",
-        "menaati rambu lalu lintas"
-      ],
-
-      answer:"C"
-    },
-
-
-    {
-      q:"Edo melihat temannya membuang sampah sembarangan di halaman sekolah. Sikap Edo yang paling tepat adalah ....",
-
-      options:[
-        "ikut membuang sampah",
-        "membiarkannya karena bukan urusannya",
-        "mengingatkan dengan sopan dan membuang sampah pada tempatnya",
-        "memarahi temannya di depan semua siswa"
-      ],
-
-      answer:"C"
-    },
-
-
-    {
-      q:`Perhatikan kegiatan berikut!
-
-- Mendapatkan kasih sayang dari orang tua.
-- Membantu membersihkan rumah.
-- Mendapat makanan dan tempat tinggal.
-- Merapikan mainan setelah digunakan.
-
-Yang termasuk hak anak di rumah adalah ....`,
-
-      options:[
-        "mendapat kasih sayang dan makanan",
-        "membantu membersihkan rumah dan merapikan mainan",
-        "menaati aturan dan membantu orang tua",
-        "menjaga kebersihan rumah dan halaman"
-      ],
-
-      answer:"A"
-    },
-
-
-    {
-      q:"Siswa memiliki hak menggunakan fasilitas sekolah. Agar hak tersebut tetap dapat digunakan bersama, siswa juga harus ....",
-
-      options:[
-        "menggunakan fasilitas sesuka hati",
-        "menjaga dan merawat fasilitas sekolah",
-        "membawa pulang fasilitas sekolah",
-        "menggunakan fasilitas lebih dahulu daripada teman"
-      ],
-
-      answer:"B"
-    },
-
-
-    {
-      q:"Saat kerja bakti di lingkungan tempat tinggal, Dimas ikut membantu membersihkan selokan. Kegiatan tersebut merupakan contoh ....",
-
-      options:[
-        "hak di masyarakat",
-        "kewajiban di masyarakat",
-        "hak di sekolah",
-        "aturan tertulis"
-      ],
-
-      answer:"B"
-    },
-
-
-    {
-      q:`Setiap pagi siswa kelas IV datang tepat waktu. Suatu hari, Beni terlambat karena bangun kesiangan. Ia tetap masuk kelas dan meminta maaf kepada guru.
-
-Sikap Beni menunjukkan bahwa ia ....`,
-
-      options:[
-        "tidak perlu menaati aturan",
-        "menyadari kesalahan dan bertanggung jawab",
-        "boleh datang terlambat setiap hari",
-        "tidak memiliki kewajiban sebagai siswa"
-      ],
-
-      answer:"B"
-    },
-
-
-    {
-      q:"Jika setiap warga hanya menuntut hak tetapi tidak melaksanakan kewajiban, kemungkinan yang terjadi adalah ....",
-
-      options:[
-        "kehidupan menjadi semakin akrab",
-        "semua orang merasa nyaman",
-        "terjadi ketidakteraturan dan perselisihan",
-        "masyarakat menjadi semakin kompak"
-      ],
-
-      answer:"C"
-    }
-
-  ],
-
-
-  /* ========================================================
-     ISIAN SINGKAT
-     ======================================================== */
-
-  isian: [
-
-    {
-      q:"Badan yang bertugas membahas persiapan kemerdekaan Indonesia dan merumuskan dasar negara adalah ....",
-
-      answer:[
-        "BPUPKI",
-        "Badan Penyelidik Usaha-usaha Persiapan Kemerdekaan Indonesia",
-        "Badan Penyelidik Usaha Persiapan Kemerdekaan Indonesia"
-      ]
-    },
-
-
-    {
-      q:"Setelah BPUPKI dibubarkan, badan tersebut digantikan oleh ....",
-
-      answer:[
-        "PPKI",
-        "Panitia Persiapan Kemerdekaan Indonesia"
-      ]
-    },
-
-
-    {
-      q:"Panitia yang terdiri atas sembilan tokoh dan berperan dalam perumusan dasar negara disebut ....",
-
-      answer:[
-        "Panitia Sembilan",
-        "Panitia 9"
-      ]
-    },
-
-
-    {
-      q:"Hasil penting dari Panitia Sembilan yang menjadi rancangan awal Pembukaan UUD adalah ....",
-
-      answer:[
-        "Piagam Jakarta",
-        "Jakarta Charter"
-      ]
-    },
-
-
-    {
-      q:"Dasar negara Indonesia adalah ....",
-
-      answer:[
-        "Pancasila"
-      ]
-    },
-
-
-    {
-      q:"Aturan yang dibuat secara resmi dan memiliki bentuk tulisan disebut aturan ....",
-
-      answer:[
-        "tertulis",
-        "aturan tertulis"
-      ]
-    },
-
-
-    {
-      q:"Aturan yang berdasarkan kebiasaan dan tidak dibuat dalam bentuk tulisan disebut aturan ....",
-
-      answer:[
-        "tidak tertulis",
-        "aturan tidak tertulis"
-      ]
-    },
-
-
-    {
-      q:"Sesuatu yang seharusnya kita terima disebut ....",
-
-      answer:[
-        "hak"
-      ]
-    },
-
-
-    {
-      q:"Sesuatu yang harus kita lakukan dengan penuh tanggung jawab disebut ....",
-
-      answer:[
-        "kewajiban"
-      ]
-    },
-
-
-    {
-      q:"Menjaga kebersihan kelas merupakan salah satu kewajiban siswa di ....",
-
-      answer:[
-        "sekolah",
-        "lingkungan sekolah"
-      ]
-    }
-
-  ],
-
-
-  /* ========================================================
-     URAIAN
-     Setiap soal maksimal 6 poin.
-     Setiap kelompok = 1 poin.
-     ======================================================== */
-
-  uraian: [
-
-    {
-      q:"Mengapa para tokoh perumus Pancasila harus mengutamakan persatuan meskipun memiliki pendapat yang berbeda?",
-
-      points:[
-
-        [
-          "agar bangsa indonesia tetap bersatu",
-          "agar indonesia tetap bersatu",
-          "bangsa indonesia tetap bersatu",
-          "indonesia tetap bersatu"
-        ],
-
-        [
-          "agar tidak terjadi perpecahan",
-          "tidak terjadi perpecahan",
-          "mencegah perpecahan",
-          "agar tidak terpecah"
-        ],
-
-        [
-          "kepentingan bangsa",
-          "kepentingan negara",
-          "kepentingan bangsa lebih penting"
-        ],
-
-        [
-          "mencapai tujuan bersama",
-          "untuk mencapai tujuan bersama",
-          "tujuan bersama"
-        ],
-
-        [
-          "melalui musyawarah",
-          "dengan musyawarah",
-          "bermusyawarah",
-          "mencapai kesepakatan"
-        ],
-
-        [
-          "menjaga keutuhan bangsa",
-          "menjaga keutuhan indonesia",
-          "agar indonesia kuat"
-        ]
-
-      ]
-    },
-
-
-    {
-      q:"Jelaskan perbedaan tugas BPUPKI dan PPKI dengan bahasamu sendiri!",
-
-      points:[
-
-        [
-          "BPUPKI"
-        ],
-
-        [
-          "merumuskan dasar negara",
-          "membahas dasar negara",
-          "merumuskan pancasila"
-        ],
-
-        [
-          "mempersiapkan kemerdekaan",
-          "persiapan kemerdekaan"
-        ],
-
-        [
-          "PPKI"
-        ],
-
-        [
-          "melanjutkan tugas BPUPKI",
-          "melanjutkan persiapan kemerdekaan"
-        ],
-
-        [
-          "mengesahkan UUD 1945",
-          "mengesahkan UUD",
-          "membentuk pemerintahan"
-        ]
-
-      ]
-    },
-
-
-    {
-      q:"Di rumah, kamu memiliki hak untuk bermain. Namun, orang tua meminta kamu menyelesaikan tugas sekolah terlebih dahulu. Apa yang sebaiknya kamu lakukan? Jelaskan alasannya!",
-
-      points:[
-
-        [
-          "mengerjakan tugas",
-          "menyelesaikan tugas",
-          "mengerjakan tugas sekolah"
-        ],
-
-        [
-          "terlebih dahulu",
-          "lebih dahulu",
-          "sebelum bermain"
-        ],
-
-        [
-          "kewajiban",
-          "merupakan kewajiban",
-          "tugas adalah kewajiban"
-        ],
-
-        [
-          "belajar adalah kewajiban",
-          "mengerjakan tugas adalah kewajiban"
-        ],
-
-        [
-          "kemudian bermain",
-          "setelah tugas selesai",
-          "baru bermain"
-        ],
-
-        [
-          "mendahulukan kewajiban",
-          "menyelesaikan kewajiban"
-        ]
-
-      ]
-    },
-
-
-    {
-      q:"Beberapa siswa selesai menggunakan kelas, tetapi mereka meninggalkan sampah dan meja dalam keadaan berantakan. Menurutmu, aturan dan kewajiban apa yang seharusnya dilakukan siswa tersebut?",
-
-      points:[
-
-        [
-          "membuang sampah pada tempatnya",
-          "membuang sampah",
-          "sampah pada tempatnya"
-        ],
-
-        [
-          "membersihkan kelas",
-          "membersihkan ruang kelas"
-        ],
-
-        [
-          "menjaga kebersihan kelas",
-          "menjaga kebersihan"
-        ],
-
-        [
-          "merapikan meja",
-          "merapikan meja dan kursi"
-        ],
-
-        [
-          "menjaga kerapian kelas",
-          "menjaga kerapian",
-          "merapikan kelas"
-        ],
-
-        [
-          "menaati aturan",
-          "mematuhi aturan",
-          "melaksanakan kewajiban"
-        ]
-
-      ]
-    },
-
-
-    {
-      q:"Mengapa hak dan kewajiban harus dilakukan secara seimbang? Berikan satu contoh dalam kehidupan sehari-hari!",
-
-      points:[
-
-        [
-          "agar kehidupan menjadi tertib",
-          "agar hidup menjadi tertib",
-          "kehidupan menjadi tertib"
-        ],
-
-        [
-          "agar kehidupan menjadi nyaman",
-          "agar hidup menjadi nyaman",
-          "kehidupan menjadi nyaman"
-        ],
-
-        [
-          "agar tercipta keadilan",
-          "agar menjadi adil",
-          "tercipta keadilan"
-        ],
-
-        [
-          "hak dan kewajiban harus seimbang",
-          "hak dan kewajiban berjalan bersama",
-          "melaksanakan hak dan kewajiban"
-        ],
-
-        [
-          "mendapat hak belajar",
-          "hak belajar dengan nyaman",
-          "mendapatkan hak"
-        ],
-
-        [
-          "menjaga kebersihan",
-          "membantu orang tua",
-          "menjaga fasilitas sekolah",
-          "menjaga ketenangan kelas",
-          "melaksanakan kewajiban"
-        ]
-
-      ]
-    }
-
-  ]
+"10":"Assyfa Putri Zahrany"
 
 };
 
 
-/* ==========================================================
-   SISTEM UJIAN
-   ========================================================== */
+/* =========================================================
+KUNCI PG
+========================================================= */
 
-let currentQuestions=[];
-let studentName="";
-let examResult=null;
-
-
-document.getElementById("headerTitle").textContent =
-  "Sumatif Tengah Semester Gasal";
-
-document.getElementById("subjectTitle").textContent =
-  NAMA_MAPEL;
-
-document.getElementById("examSubject").textContent =
-  NAMA_MAPEL;
+const kunciPG = {
+q1:"B", q2:"D", q3:"A", q4:"B", q5:"A",
+q6:"B", q7:"B", q8:"C", q9:"C", q10:"C",
+q11:"A", q12:"B", q13:"B", q14:"B", q15:"C"
+};
 
 
-function updateWelcome(){
+/* =========================================================
+KUNCI ISIAN
+========================================================= */
 
-  const name =
-    document.getElementById("studentName").value.trim();
+const kunciIsian = {
+q16:["bpupki","badan penyelidik usaha usaha persiapan kemerdekaan indonesia","badan penyelidik usaha-usaha persiapan kemerdekaan indonesia"],
+q17:["ppki","panitia persiapan kemerdekaan indonesia"],
+q18:["sembilan","panitia sembilan"],
+q19:["piagam jakarta","piagam djakarta"],
+q20:["pancasila"],
+q21:["tertulis"],
+q22:["tidak tertulis","tidaktertulis"],
+q23:["hak"],
+q24:["kewajiban"],
+q25:["sekolah"]
+};
 
-  document.getElementById("welcomeTitle").textContent =
-    name
-      ? "Selamat Datang, " + name + "!"
-      : "Selamat Datang!";
+
+/* =========================================================
+RUBRIK URAIAN
+========================================================= */
+
+const rubrikUraian = {
+q26:[
+["persatuan","bersatu","tetap bersatu"],
+["kepentingan bangsa","kepentingan bersama"],
+["mencegah perpecahan","tidak terjadi perpecahan"],
+["tujuan bersama","cita-cita bersama"],
+["musyawarah","kesepakatan"],
+["Indonesia kuat","keutuhan Indonesia"]
+],
+q27:[
+["bpupki"],
+["membahas dasar negara","merumuskan dasar negara"],
+["mempersiapkan kemerdekaan","persiapan kemerdekaan"],
+["ppki"],
+["melanjutkan tugas bpupki","melanjutkan tugas setelah bpupki"],
+["mengesahkan uud 1945","mengesahkan uud"]
+],
+q28:[
+["menjalankan kewajiban","melaksanakan kewajiban"],
+["sebelum menuntut hak","terlebih dahulu menjalankan kewajiban"],
+["tanggung jawab"],
+["belajar","mengerjakan tugas"],
+["kemudian bermain","setelah kewajiban"],
+["membantu orang tua","merapikan kamar","mengerjakan tugas sekolah"]
+],
+q29:[
+["menaati aturan","mematuhi aturan"],
+["tertib","ketertiban"],
+["nyaman","kenyamanan"],
+["belajar dengan baik","kegiatan belajar"],
+["kebersihan","bersih"],
+["tanggung jawab"]
+],
+q30:[
+["hak dan kewajiban","hak serta kewajiban"],
+["seimbang","keseimbangan"],
+["menjalankan kewajiban","melaksanakan kewajiban"],
+["mendapatkan hak","menerima hak"],
+["hak belajar","belajar"],
+["mengerjakan tugas","menaati aturan","membantu orang tua"]
+]
+};
+
+
+/* =========================================================
+PILIH ABSEN
+========================================================= */
+
+function pilihAbsen(){
+
+const absen =
+document.getElementById("absen").value;
+
+const nama =
+document.getElementById("nama");
+
+const welcome =
+document.getElementById("welcomeName");
+
+if(absen && siswa[absen]){
+
+nama.value =
+siswa[absen];
+
+welcome.textContent =
+siswa[absen];
+
+}else{
+
+nama.value="";
+
+welcome.textContent =
+"Peserta Didik!";
+
 }
-
-
-function startExam(){
-
-  studentName =
-    document.getElementById("studentName").value.trim();
-
-  if(!studentName){
-
-    alert("Silakan isi nama siswa terlebih dahulu.");
-
-    return;
-  }
-
-
-  if(
-    DATA_SOAL.pilihanGanda.length!==15 ||
-    DATA_SOAL.isian.length!==10 ||
-    DATA_SOAL.uraian.length!==5
-  ){
-
-    alert(
-      "Jumlah soal harus 15 pilihan ganda, 10 isian singkat, dan 5 uraian."
-    );
-
-    return;
-  }
-
-
-  currentQuestions=[
-
-    ...DATA_SOAL.pilihanGanda.map(
-      (x,i)=>({
-        ...x,
-        type:"PG",
-        id:"pg"+(i+1),
-        number:i+1
-      })
-    ),
-
-    ...DATA_SOAL.isian.map(
-      (x,i)=>({
-        ...x,
-        type:"ISIAN",
-        id:"isian"+(i+1),
-        number:i+16
-      })
-    ),
-
-    ...DATA_SOAL.uraian.map(
-      (x,i)=>({
-        ...x,
-        type:"URAIAN",
-        id:"uraian"+(i+1),
-        number:i+26
-      })
-    )
-
-  ];
-
-
-  document
-    .getElementById("startPage")
-    .classList.add("hidden");
-
-  document
-    .getElementById("examPage")
-    .classList.remove("hidden");
-
-
-  renderQuestions();
-
-  window.scrollTo({
-    top:0,
-    behavior:"smooth"
-  });
-}
-
-
-function renderQuestions(){
-
-  const container =
-    document.getElementById("questions");
-
-  container.innerHTML="";
-
-
-  const sections=[
-
-    {
-      type:"PG",
-      title:"A. Pilihan Ganda",
-      sub:"Pilih satu jawaban yang paling tepat."
-    },
-
-    {
-      type:"ISIAN",
-      title:"B. Isian Singkat",
-      sub:"Tuliskan jawaban yang tepat."
-    },
-
-    {
-      type:"URAIAN",
-      title:"C. Uraian",
-      sub:"Jawablah dengan jelas dan lengkap."
-    }
-
-  ];
-
-
-  sections.forEach(section=>{
-
-    const title =
-      document.createElement("div");
-
-    title.className="section-title";
-
-    title.innerHTML =
-      section.title +
-      '<div class="small">'+
-      section.sub+
-      "</div>";
-
-    container.appendChild(title);
-
-
-    currentQuestions
-      .filter(x=>x.type===section.type)
-      .forEach(item=>{
-
-        const box =
-          document.createElement("div");
-
-        box.className="question";
-
-
-        let content =
-          '<div class="qtext">'+
-          '<span class="number">'+
-          item.number+
-          '</span>'+
-          '<span class="question-text">'+
-          escapeHtml(item.q)
-            .replace(/\n/g,"<br>")+
-          '</span>'+
-          '</div>';
-
-
-        if(item.type==="PG"){
-
-          content +=
-            item.options.map((opt,index)=>{
-
-              const letter =
-                String.fromCharCode(65+index);
-
-              return (
-                '<label class="option">'+
-                '<input type="radio" name="'+
-                item.id+
-                '" value="'+
-                letter+
-                '" onchange="updateProgress()">'+
-                '<span><b>'+
-                letter+
-                '.</b> '+
-                escapeHtml(opt)+
-                '</span>'+
-                '</label>'
-              );
-
-            }).join("");
-
-        }
-
-
-        else if(item.type==="ISIAN"){
-
-          content +=
-            '<input type="text" '+
-            'name="'+item.id+'" '+
-            'placeholder="Ketik jawaban..." '+
-            'oninput="updateProgress()">';
-
-        }
-
-
-        else{
-
-          content +=
-            '<textarea '+
-            'name="'+item.id+'" '+
-            'placeholder="Tuliskan jawaban..." '+
-            'oninput="updateProgress()">'+
-            '</textarea>';
-
-        }
-
-
-        box.innerHTML=content;
-
-        container.appendChild(box);
-
-      });
-
-  });
-
-
-  updateProgress();
-}
-
-
-/* ==========================================================
-   NORMALISASI JAWABAN
-   ========================================================== */
-
-function normalize(text){
-
-  return String(text ?? "")
-    .toLowerCase()
-    .trim()
-    .replace(/\s+/g," ")
-    .replace(/[.,!?;:]+$/g,"");
 
 }
 
 
-/* ==========================================================
-   CEK PG DAN ISIAN
-   ========================================================== */
+/* =========================================================
+MULAI UJIAN
+========================================================= */
 
-function isCorrect(user,key,type){
+function mulaiUjian(){
 
-  if(!user) return false;
+const absen =
+document.getElementById("absen").value;
 
-  const userText =
-    normalize(user);
+const nama =
+document.getElementById("nama").value;
 
+if(!absen){
 
-  if(type==="PG"){
+alert(
+"Silakan pilih No. Absen terlebih dahulu."
+);
 
-    const accepted =
-      Array.isArray(key)
-        ? key
-        : [key];
+return;
 
-    return accepted.some(
-      ans =>
-        userText === normalize(ans)
-    );
+}
 
-  }
+if(!nama){
 
+alert("Nama belum muncul.");
 
-  if(type==="ISIAN"){
+return;
 
-    const accepted =
-      Array.isArray(key)
-        ? key
-        : [key];
+}
 
-    return accepted.some(
-      ans =>
-        userText === normalize(ans)
-    );
+document
+.getElementById("startPage")
+.classList.remove("active");
 
-  }
+document
+.getElementById("examPage")
+.classList.add("active");
 
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
 
-  return false;
+updateProgress();
+
 }
 
 
-/* ==========================================================
-   HITUNG POIN URAIAN
-   ========================================================== */
-
-function getUraianPoints(user, pointGroups){
-
-  if(!user || !pointGroups){
-    return 0;
-  }
-
-
-  const userText =
-    normalize(user);
-
-
-  let totalPoints=0;
-
-
-  pointGroups.forEach(group=>{
-
-    const found =
-      group.some(keyword=>{
-
-        const key =
-          normalize(keyword);
-
-        return key &&
-          userText.includes(key);
-
-      });
-
-
-    if(found){
-      totalPoints++;
-    }
-
-  });
-
-
-  return totalPoints;
-}
-
-
-/* ==========================================================
-   AMBIL JAWABAN
-   ========================================================== */
-
-function getAnswer(id){
-
-  const elements =
-    document.querySelectorAll(
-      '[name="'+id+'"]'
-    );
-
-  if(!elements.length){
-    return "";
-  }
-
-  // Untuk pilihan ganda
-  if(elements[0].type==="radio"){
-
-    const checked =
-      Array.from(elements)
-        .find(el=>el.checked);
-
-    return checked
-      ? checked.value
-      : "";
-  }
-
-  // Untuk isian dan uraian
-  return elements[0].value || "";
-}
-
-
-/* ==========================================================
-   PROGRESS
-   ========================================================== */
+/* =========================================================
+PROGRESS
+========================================================= */
 
 function updateProgress(){
 
-  let answered=0;
+const form =
+document.getElementById("examForm");
 
+let answered=0;
 
-  currentQuestions.forEach(q=>{
 
-    if(normalize(getAnswer(q.id))){
-      answered++;
-    }
+for(let i=1;i<=15;i++){
 
-  });
+const checked =
+form.querySelector(
+`input[name="q${i}"]:checked`
+);
 
-
-  document.getElementById("progressText").textContent =
-    answered+"/30 soal terjawab";
-
-
-  document.getElementById("progressBar").style.width =
-    (answered/30*100)+"%";
-}
-
-
-/* ==========================================================
-   SELESAIKAN UJIAN
-   ========================================================== */
-
-async function finishExam(){
-
-  const unanswered =
-    currentQuestions.filter(
-      q=>!normalize(getAnswer(q.id))
-    ).length;
-
-
-  if(
-    unanswered>0 &&
-    !confirm(
-      "Masih ada "+
-      unanswered+
-      " soal yang belum dijawab. Tetap kumpulkan?"
-    )
-  ){
-
-    return;
-  }
-
-
-  let pg=0;
-  let isian=0;
-
-  let uraianPoints=0;
-  let uraianMaxPoints=0;
-
-  const review=[];
-
-
-  currentQuestions.forEach(q=>{
-
-    const user =
-      getAnswer(q.id);
-
-
-    /* ==========================
-       PILIHAN GANDA
-       ========================== */
-
-    if(q.type==="PG"){
-
-      const correct =
-        isCorrect(
-          user,
-          q.answer,
-          q.type
-        );
-
-
-      if(correct){
-        pg++;
-      }
-
-
-      review.push({
-
-        q:q,
-        user:user,
-        correct:correct,
-        score:correct ? 1 : 0,
-        maxScore:1
-
-      });
-
-    }
-
-
-    /* ==========================
-       ISIAN
-       ========================== */
-
-    else if(q.type==="ISIAN"){
-
-      const correct =
-        isCorrect(
-          user,
-          q.answer,
-          q.type
-        );
-
-
-      if(correct){
-        isian++;
-      }
-
-
-      review.push({
-
-        q:q,
-        user:user,
-        correct:correct,
-        score:correct ? 1 : 0,
-        maxScore:1
-
-      });
-
-    }
-
-
-    /* ==========================
-       URAIAN
-       ========================== */
-
-    else if(q.type==="URAIAN"){
-
-      const pointCount =
-        getUraianPoints(
-          user,
-          q.points
-        );
-
-
-      const maxPoints =
-        q.points.length;
-
-
-      uraianPoints +=
-        pointCount;
-
-      uraianMaxPoints +=
-        maxPoints;
-
-
-      review.push({
-
-        q:q,
-        user:user,
-        correct:
-          pointCount===maxPoints,
-
-        score:pointCount,
-        maxScore:maxPoints
-
-      });
-
-    }
-
-  });
-
-
-  /* ==========================
-     HITUNG NILAI
-     ========================== */
-
-  const pgScore =
-    (pg/15)*40;
-
-
-  const isianScore =
-    (isian/10)*30;
-
-
-  const uraianScore =
-    uraianMaxPoints>0
-      ? (uraianPoints/uraianMaxPoints)*30
-      : 0;
-
-
-  const total =
-    Math.round(
-      pgScore+
-      isianScore+
-      uraianScore
-    );
-
-
-  examResult={
-
-    total:total,
-
-    pg:pg,
-
-    isian:isian,
-
-    uraianPoints:uraianPoints,
-
-    uraianMaxPoints:uraianMaxPoints,
-
-    uraianScore:Math.round(uraianScore),
-
-    review:review
-
-  };
-
-
-  showResult();
-
-  await sendToFormspree();
+if(checked) answered++;
 
 }
 
 
-/* ==========================================================
-   TAMPILKAN HASIL
-   ========================================================== */
+for(let i=16;i<=30;i++){
 
-function showResult(){
+const input =
+form.querySelector(
+`[name="q${i}"]`
+);
 
-  document
-    .getElementById("examPage")
-    .classList.add("hidden");
+if(input &&
+input.value.trim()!==""){
 
+answered++;
 
-  document
-    .getElementById("resultPage")
-    .classList.remove("hidden");
-
-
-  document.getElementById("resultStudent").innerHTML =
-    "<b>"+
-    escapeHtml(studentName)+
-    "</b> • Kelas IV • "+
-    escapeHtml(NAMA_MAPEL);
-
-
-  document.getElementById("score").textContent =
-    examResult.total;
-
-
-  let msg =
-    "Silakan terus tingkatkan hasil belajar.";
-
-
-  if(examResult.total>=90){
-
-    msg="Hasil sangat baik.";
-
-  }
-
-  else if(examResult.total>=80){
-
-    msg="Hasil baik.";
-
-  }
-
-  else if(examResult.total>=70){
-
-    msg="Hasil cukup baik.";
-
-  }
-
-
-  document.getElementById("resultMessage")
-    .textContent=msg;
-
-
-  document.getElementById("detailScore").textContent =
-    "Pilihan Ganda: "+
-    examResult.pg+
-    "/15 | Isian: "+
-    examResult.isian+
-    "/10 | Uraian: "+
-    examResult.uraianPoints+
-    "/"+
-    examResult.uraianMaxPoints+
-    " poin";
-
-
-  const reviewBox =
-    document.getElementById("review");
-
-
-  reviewBox.innerHTML =
-    "<h3>Ringkasan Jawaban</h3>";
-
-
-  examResult.review.forEach(
-    (item,i)=>{
-
-      let key="";
-
-
-      if(item.q.type==="URAIAN"){
-
-        key =
-          item.q.points
-            .map(group=>group[0])
-            .join(" / ");
-
-      }
-
-      else{
-
-        key =
-          Array.isArray(item.q.answer)
-            ? item.q.answer.join(" / ")
-            : item.q.answer;
-
-      }
-
-
-      const div =
-        document.createElement("div");
-
-
-      div.className =
-        "review-item "+
-        (item.correct
-          ? "correct"
-          : "wrong");
-
-
-      let scoreText="";
-
-
-      if(item.q.type==="URAIAN"){
-
-        scoreText =
-          "<br><span class='small'>"+
-          "Poin: "+
-          item.score+
-          "/"+
-          item.maxScore+
-          "</span>";
-
-      }
-
-
-      div.innerHTML =
-        "<b>"+
-        (i+1)+
-        ". "+
-        escapeHtml(item.q.q)+
-        "</b><br>"+
-
-        "Jawaban: "+
-        escapeHtml(
-          item.user ||
-          "(tidak dijawab)"
-        )+
-
-        scoreText+
-
-        "<br><span class='small'>"+
-        "Kunci: "+
-        escapeHtml(key)+
-        "</span>";
-
-
-      reviewBox.appendChild(div);
-
-    }
-  );
-
-
-  window.scrollTo({
-
-    top:0,
-
-    behavior:"smooth"
-
-  });
+}
 
 }
 
 
-/* ==========================================================
-   FORMSPREE
-   ========================================================== */
+const persen =
+(answered/30)*100;
 
-async function sendToFormspree(){
+document
+.getElementById("progressText")
+.textContent =
+`${answered} / 30 soal terjawab`;
 
-  if(
-    !FORMSPREE_ENDPOINT ||
-    FORMSPREE_ENDPOINT.includes(
-      "GANTI_DENGAN"
-    )
-  ){
-
-    return;
-  }
-
-
-  const detail =
-    currentQuestions
-      .map((q,i)=>{
-
-        return (
-          (i+1)+
-          ". "+
-          getAnswer(q.id)
-        );
-
-      })
-      .join("\n");
-
-
-  const payload={
-
-    nama_siswa:studentName,
-
-    kelas:"IV",
-
-    mata_pelajaran:NAMA_MAPEL,
-
-    nilai:examResult.total,
-
-    pilihan_ganda_benar:
-      examResult.pg+
-      "/15",
-
-    isian_benar:
-      examResult.isian+
-      "/10",
-
-    uraian_poin:
-      examResult.uraianPoints+
-      "/"+
-      examResult.uraianMaxPoints,
-
-    nilai_uraian:
-      examResult.uraianScore,
-
-    jawaban:detail
-
-  };
-
-
-  try{
-
-    await fetch(
-      FORMSPREE_ENDPOINT,
-      {
-        method:"POST",
-
-        headers:{
-          "Content-Type":
-            "application/json",
-
-          "Accept":
-            "application/json"
-        },
-
-        body:
-          JSON.stringify(payload)
-      }
-    );
-
-  }
-
-  catch(error){
-
-    console.log(
-      "Pengiriman hasil ke Formspree gagal:",
-      error
-    );
-
-  }
+document
+.getElementById("progressFill")
+.style.width =
+persen+"%";
 
 }
 
 
-/* ==========================================================
-   ESCAPE HTML
-   ========================================================== */
+/* =========================================================
+NORMALISASI
+========================================================= */
 
-function escapeHtml(text){
+function normalisasi(teks){
 
-  return String(text)
-
-    .replace(
-      /&/g,
-      "&amp;"
-    )
-
-    .replace(
-      /</g,
-      "&lt;"
-    )
-
-    .replace(
-      />/g,
-      "&gt;"
-    )
-
-    .replace(
-      /"/g,
-      "&quot;"
-    )
-
-    .replace(
-      /'/g,
-      "&#039;"
-    );
+return teks
+.toLowerCase()
+.trim()
+.replace(/\s+/g," ");
 
 }
 
 
-function scrollToTop(){
+/* =========================================================
+CEK ISIAN
+========================================================= */
 
-  window.scrollTo({
+function cekIsian(jawaban,kunci){
 
-    top:0,
+const j =
+normalisasi(jawaban);
 
-    behavior:"smooth"
-
-  });
+return kunci.some(
+item =>
+j === normalisasi(item)
+);
 
 }
+
+
+/* =========================================================
+CEK URAIAN
+========================================================= */
+
+function cekUraian(jawaban,rubrik){
+
+const j =
+normalisasi(jawaban);
+
+let poin=0;
+
+rubrik.forEach(kelompok=>{
+
+const ditemukan =
+kelompok.some(
+kata =>
+j.includes(
+normalisasi(kata)
+)
+);
+
+if(ditemukan){
+
+poin++;
+
+}
+
+});
+
+return poin;
+
+}
+
+
+/* =========================================================
+KUMPULKAN
+========================================================= */
+
+async function kumpulkanUjian(){
+
+const konfirmasi =
+confirm(
+"Apakah kamu yakin ingin mengumpulkan jawaban? Setelah dikumpulkan, jawaban tidak dapat diubah."
+);
+
+if(!konfirmasi) return;
+
+
+const form =
+document.getElementById("examForm");
+
+const absen =
+document.getElementById("absen").value;
+
+const nama =
+document.getElementById("nama").value;
+
+
+/* PG */
+
+let pgBenar=0;
+
+for(let i=1;i<=15;i++){
+
+const jawaban =
+form.querySelector(
+`input[name="q${i}"]:checked`
+);
+
+if(
+jawaban &&
+jawaban.value ===
+kunciPG[`q${i}`]
+){
+
+pgBenar++;
+
+}
+
+}
+
+const nilaiPG =
+(pgBenar/15)*40;
+
+
+/* ISIAN */
+
+let isianBenar=0;
+
+for(let i=16;i<=25;i++){
+
+const input =
+form.querySelector(
+`[name="q${i}"]`
+);
+
+if(
+input &&
+cekIsian(
+input.value,
+kunciIsian[`q${i}`]
+)
+){
+
+isianBenar++;
+
+}
+
+}
+
+const nilaiIsian =
+(isianBenar/10)*30;
+
+
+/* URAIAN */
+
+let totalUraianPoin=0;
+
+let totalMaksimalUraian=0;
+
+for(let i=26;i<=30;i++){
+
+const input =
+form.querySelector(
+`[name="q${i}"]`
+);
+
+const rubrik =
+rubrikUraian[`q${i}`];
+
+totalUraianPoin +=
+cekUraian(
+input.value,
+rubrik
+);
+
+totalMaksimalUraian +=
+rubrik.length;
+
+}
+
+
+const nilaiUraian =
+(totalUraianPoin/
+totalMaksimalUraian)*30;
+
+
+/* NILAI AKHIR */
+
+const nilaiAkhir =
+Math.round(
+nilaiPG+
+nilaiIsian+
+nilaiUraian
+);
+
+
+/* TAMPILKAN */
+
+document
+.getElementById("examPage")
+.classList.remove("active");
+
+document
+.getElementById("resultPage")
+.classList.add("active");
+
+document
+.getElementById("resultName")
+.textContent =
+`${nama} • No. Absen ${absen}`;
+
+document
+.getElementById("finalScore")
+.textContent =
+nilaiAkhir;
+
+document
+.getElementById("pgBenar")
+.textContent =
+pgBenar;
+
+document
+.getElementById("isianBenar")
+.textContent =
+isianBenar;
+
+document
+.getElementById("uraianPoin")
+.textContent =
+totalUraianPoin;
+
+
+buatReview();
+
+
+/* KIRIM FORMSPREE */
+
+const dataJawaban={};
+
+for(let i=1;i<=30;i++){
+
+if(i<=15){
+
+const checked =
+form.querySelector(
+`input[name="q${i}"]:checked`
+);
+
+dataJawaban[`soal_${i}`] =
+checked
+?checked.value
+:"";
+
+}else{
+
+const input =
+form.querySelector(
+`[name="q${i}"]`
+);
+
+dataJawaban[`soal_${i}`] =
+input
+?input.value
+:"";
+
+}
+
+}
+
+
+try{
+
+if(
+FORMSPREE_ENDPOINT &&
+!FORMSPREE_ENDPOINT.includes(
+"GANTI_DENGAN"
+)
+){
+
+await fetch(
+FORMSPREE_ENDPOINT,
+{
+
+method:"POST",
+
+headers:{
+"Content-Type":
+"application/json",
+
+"Accept":
+"application/json"
+},
+
+body:JSON.stringify({
+
+nama_siswa:nama,
+
+no_absen:absen,
+
+kelas_fase:"IV / B",
+
+mata_pelajaran:"Pendidikan Pancasila",
+
+nilai:nilaiAkhir,
+
+nilai_pg:
+Math.round(nilaiPG),
+
+nilai_isian:
+Math.round(nilaiIsian),
+
+nilai_uraian:
+Math.round(nilaiUraian),
+
+pilihan_ganda_benar:
+`${pgBenar}/15`,
+
+isian_benar:
+`${isianBenar}/10`,
+
+uraian_poin:
+`${totalUraianPoin}/${totalMaksimalUraian}`,
+
+jawaban:
+JSON.stringify(dataJawaban)
+
+})
+
+}
+);
+
+}
+
+}catch(error){
+
+console.log(
+"Pengiriman Formspree gagal:",
+error
+);
+
+}
+
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+}
+
+
+/* =========================================================
+REVIEW
+========================================================= */
+
+function buatReview(){
+
+const form =
+document.getElementById("examForm");
+
+const review =
+document.getElementById("review");
+
+review.innerHTML="";
+
+
+for(let i=1;i<=15;i++){
+
+const checked =
+form.querySelector(
+`input[name="q${i}"]:checked`
+);
+
+const jawaban =
+checked
+?checked.value
+:"Tidak dijawab";
+
+const benar =
+jawaban ===
+kunciPG[`q${i}`];
+
+const div =
+document.createElement("div");
+
+div.className =
+"review-item";
+
+div.innerHTML=`
+
+<strong>Soal ${i}</strong>
+
+<p>
+Jawaban kamu:
+<strong>${jawaban}</strong>
+</p>
+
+<p>
+Kunci:
+<strong>${kunciPG[`q${i}`]}</strong>
+</p>
+
+<p class="${benar?"correct":"wrong"}">
+${benar?"✓ Benar":"✗ Salah"}
+</p>
+
+`;
+
+review.appendChild(div);
+
+}
+
+
+for(let i=16;i<=30;i++){
+
+const input =
+form.querySelector(
+`[name="q${i}"]`
+);
+
+const jawaban =
+input
+?input.value
+:"";
+
+const div =
+document.createElement("div");
+
+div.className =
+"review-item";
+
+div.innerHTML=`
+
+<strong>Soal ${i}</strong>
+
+<p>
+Jawaban kamu:
+<strong>
+${
+jawaban.trim()
+?jawaban
+:"Tidak dijawab"
+}
+</strong>
+</p>
+
+`;
+
+review.appendChild(div);
+
+}
+
+}
+
+
+/* UPDATE PROGRESS */
+
+document.addEventListener(
+"change",
+updateProgress
+);
+
+document.addEventListener(
+"input",
+updateProgress
+);
 
 </script>
 
