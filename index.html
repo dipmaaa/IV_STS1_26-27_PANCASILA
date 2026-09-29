@@ -332,10 +332,63 @@ select:disabled{
         padding:18px;
     }
 }
+
+/* ================= PENGAMAN UJIAN ================= */
+#warningOverlay,#lockOverlay{
+display:none;position:fixed;inset:0;background:rgba(0,0,0,.78);
+z-index:99999;align-items:center;justify-content:center;padding:20px;
+}
+.security-box{
+background:white;width:100%;max-width:420px;border-radius:16px;padding:25px;
+text-align:center;box-shadow:0 10px 40px rgba(0,0,0,.35);
+}
+.security-box h2{color:#102a43;margin-top:0;}
+.security-box p{line-height:1.6;}
+.security-box input{
+width:100%;padding:12px;margin:12px 0;border:1px solid #ccd5df;
+border-radius:9px;font-size:16px;text-align:center;
+}
+.security-box button{
+border:none;background:#102a43;color:white;padding:12px 24px;
+border-radius:9px;font-weight:bold;cursor:pointer;
+}
+#passwordError{display:none;color:#c0392b;margin-top:10px;font-size:14px;}
+
 </style>
 </head>
 
 <body>
+
+
+<!-- ================= PENGAMAN UJIAN ================= -->
+<div id="warningOverlay">
+<div class="security-box">
+<h2>⚠️ PERINGATAN</h2>
+<p>
+Kamu telah keluar dari halaman ujian.
+<br><br>
+<b>Ini adalah peringatan pertama.</b>
+<br>
+Jangan berpindah ke aplikasi atau halaman lain selama ujian.
+</p>
+<button type="button" onclick="closeWarning()">KEMBALI KE UJIAN</button>
+</div>
+</div>
+
+<div id="lockOverlay">
+<div class="security-box">
+<h2>🔒 UJIAN TERKUNCI</h2>
+<p>
+Kamu telah keluar dari halaman ujian sebanyak <b>2 kali</b>.
+<br><br>
+Minta guru memasukkan password untuk melanjutkan.
+</p>
+<input type="password" id="teacherPassword" placeholder="Password Guru" autocomplete="off">
+<button type="button" onclick="unlockExam()">BUKA UJIAN</button>
+<div id="passwordError">Password salah.</div>
+</div>
+</div>
+
 
 <div class="container">
 
@@ -1060,6 +1113,8 @@ confirm(
 
 if(!konfirmasi) return;
 
+    examSubmitted = true;
+
 
 const form =
 document.getElementById("examForm");
@@ -1440,6 +1495,97 @@ document.addEventListener(
 "input",
 updateProgress
 );
+
+
+/* =========================================================
+PENGAMAN UJIAN
+========================================================= */
+const TEACHER_PASSWORD = "vascodagama";
+let warningCount = 0;
+let examLocked = false;
+let examSubmitted = false;
+
+document.addEventListener("visibilitychange", function(){
+    if(!document.hidden) return;
+    const examPage = document.getElementById("examPage");
+    if(!examPage || !examPage.classList.contains("active")) return;
+    if(examLocked || examSubmitted) return;
+
+    warningCount++;
+
+    if(warningCount === 1){
+        document.getElementById("warningOverlay").style.display = "flex";
+    }else{
+        lockExam();
+    }
+});
+
+function closeWarning(){
+    document.getElementById("warningOverlay").style.display = "none";
+}
+
+function lockExam(){
+    examLocked = true;
+    document.getElementById("lockOverlay").style.display = "flex";
+    setTimeout(function(){
+        const p = document.getElementById("teacherPassword");
+        if(p) p.focus();
+    },300);
+}
+
+function unlockExam(){
+    const input = document.getElementById("teacherPassword");
+    const error = document.getElementById("passwordError");
+
+    if(input.value.trim() === TEACHER_PASSWORD){
+        examLocked = false;
+        document.getElementById("lockOverlay").style.display = "none";
+        input.value = "";
+        error.style.display = "none";
+    }else{
+        error.style.display = "block";
+        input.value = "";
+        input.focus();
+    }
+}
+
+document.addEventListener("keydown", function(e){
+    const overlay = document.getElementById("lockOverlay");
+    if(e.key === "Enter" && overlay && overlay.style.display === "flex"){
+        unlockExam();
+        return;
+    }
+
+    if(e.ctrlKey && ["c","x","u"].includes(e.key.toLowerCase())){
+        e.preventDefault();
+    }
+
+    if(e.key === "F12"){
+        e.preventDefault();
+    }
+});
+
+document.addEventListener("copy",function(e){e.preventDefault();});
+document.addEventListener("cut",function(e){e.preventDefault();});
+
+document.addEventListener("paste",function(e){
+    const target=e.target;
+    if(target.tagName!=="INPUT" && target.tagName!=="TEXTAREA"){
+        e.preventDefault();
+    }
+});
+
+document.addEventListener("contextmenu",function(e){
+    e.preventDefault();
+});
+
+window.addEventListener("beforeunload",function(e){
+    const examPage=document.getElementById("examPage");
+    if(examPage && examPage.classList.contains("active") && !examSubmitted){
+        e.preventDefault();
+        e.returnValue="";
+    }
+});
 
 </script>
 
