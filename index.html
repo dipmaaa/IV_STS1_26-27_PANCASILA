@@ -2,1012 +2,733 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>STS Gasal Matematika Kelas IV</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STS Gasal Pendidikan Pancasila Kelas IV</title>
 
 <style>
-*{box-sizing:border-box}
+*{
+    box-sizing:border-box;
+}
+
 body{
-  margin:0;font-family:Arial,Helvetica,sans-serif;
-  background:#eef2f7;color:#172033
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#eef2f7;
+    color:#172033;
 }
-.container{max-width:950px;margin:25px auto;padding:0 15px}
+
+.container{
+    max-width:950px;
+    margin:25px auto;
+    padding:0 15px;
+}
+
+/* ================= KOP ================= */
+
 .header{
-  background:#102a43;border-radius:14px;overflow:hidden;
-  margin-bottom:20px;box-shadow:0 6px 20px rgba(0,0,0,.12)
+    background:#102a43;
+    border-radius:14px;
+    overflow:hidden;
+    margin-bottom:20px;
+    box-shadow:0 6px 20px rgba(0,0,0,.12);
 }
+
 .brand{
-  display:flex;align-items:center;justify-content:center;
-  gap:25px;padding:18px 25px;border-bottom:4px solid #d4af37
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:25px;
+    padding:18px 25px;
+    border-bottom:4px solid #d4af37;
 }
-.logo-img{width:72px;height:72px;object-fit:contain;flex-shrink:0}
-.header-title{text-align:center;flex:1;color:white}
-.header-title h1{margin:0;font-size:22px;letter-spacing:.5px}
-.header-title h2{margin:6px 0;font-size:18px}
-.header-title p{margin:0;font-size:14px;color:#e8edf3}
+
+.logo-img{
+    width:72px;
+    height:72px;
+    object-fit:contain;
+    flex-shrink:0;
+}
+
+.header-title{
+    text-align:center;
+    flex:1;
+    color:white;
+}
+
+.header-title h1{
+    margin:0;
+    font-size:22px;
+    letter-spacing:.5px;
+}
+
+.header-title h2{
+    margin:6px 0;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.header-title p{
+    margin:0;
+    font-size:14px;
+    color:#e8edf3;
+}
+
+/* ================= CARD ================= */
 
 .card{
-  background:white;border-radius:16px;padding:25px;
-  margin-bottom:20px;box-shadow:0 4px 18px rgba(0,0,0,.07)
+    background:white;
+    border-radius:16px;
+    padding:25px;
+    margin-bottom:20px;
+    box-shadow:0 4px 18px rgba(0,0,0,.07);
 }
-.welcome{text-align:center}
-.welcome h2{margin-top:0;color:#102a43}
-#welcomeName{color:#1769aa}
+
+.welcome{
+    text-align:center;
+}
+
+.welcome h2{
+    margin-top:0;
+    color:#102a43;
+}
+
+#welcomeName{
+    color:#1769aa;
+}
+
+/* ================= INFO ================= */
 
 .info-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  gap:12px;margin:20px 0
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+    margin:20px 0;
 }
-.info-box{
-  background:#f3f6fa;border:1px solid #e1e7ee;
-  border-radius:12px;padding:15px;text-align:center
-}
-.info-box strong{display:block;font-size:24px;color:#102a43}
-.info-box span{font-size:13px;color:#666}
 
-.form-group{margin-bottom:17px}
-.form-group label{display:block;font-weight:bold;margin-bottom:7px}
-input,select,textarea{
-  width:100%;padding:12px 14px;border:1px solid #ccd5df;
-  border-radius:9px;font-size:15px;font-family:inherit
+.info-box{
+    background:#f3f6fa;
+    border:1px solid #e1e7ee;
+    border-radius:12px;
+    padding:15px;
+    text-align:center;
 }
-input[readonly],select:disabled{background:#f1f3f5;color:#333}
+
+.info-box strong{
+    display:block;
+    font-size:24px;
+    color:#102a43;
+}
+
+.info-box span{
+    font-size:13px;
+    color:#666;
+}
+
+/* ================= FORM ================= */
+
+.form-group{
+    margin-bottom:17px;
+}
+
+.form-group label{
+    display:block;
+    font-weight:bold;
+    margin-bottom:7px;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:12px 14px;
+    border:1px solid #ccd5df;
+    border-radius:9px;
+    font-size:15px;
+    font-family:inherit;
+}
+
+input[readonly],
+select:disabled{
+    background:#f1f3f5;
+    color:#333;
+}
+
+/* ================= BUTTON ================= */
 
 .btn{
-  border:none;padding:13px 25px;border-radius:9px;
-  font-size:15px;font-weight:bold;cursor:pointer
+    border:none;
+    padding:13px 25px;
+    border-radius:9px;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
 }
-.btn-primary{background:#102a43;color:white}
-.btn-primary:hover{background:#0b2033}
-.btn-success{background:#18794e;color:white}
-.btn-success:hover{background:#12613e}
 
-.progress-area{margin-bottom:20px}
+.btn-primary{
+    background:#102a43;
+    color:white;
+}
+
+.btn-primary:hover{
+    background:#0b2033;
+}
+
+.btn-success{
+    background:#18794e;
+    color:white;
+}
+
+.btn-success:hover{
+    background:#12613e;
+}
+
+/* ================= PROGRESS ================= */
+
+.progress-area{
+    margin-bottom:20px;
+}
+
 .progress-info{
-  display:flex;justify-content:space-between;
-  font-size:14px;margin-bottom:7px
+    display:flex;
+    justify-content:space-between;
+    font-size:14px;
+    margin-bottom:7px;
 }
+
 .progress-bar{
-  width:100%;height:9px;background:#dce3ea;
-  border-radius:10px;overflow:hidden
+    width:100%;
+    height:9px;
+    background:#dce3ea;
+    border-radius:10px;
+    overflow:hidden;
 }
+
 .progress-fill{
-  height:100%;width:0%;background:#102a43;transition:.3s
+    height:100%;
+    width:0%;
+    background:#102a43;
+    transition:.3s;
 }
+
+/* ================= SOAL ================= */
 
 .question{
-  background:#f8fafc;border:1px solid #e0e6ed;
-  border-radius:12px;padding:18px;margin-bottom:17px
+    background:#f8fafc;
+    border:1px solid #e0e6ed;
+    border-radius:12px;
+    padding:18px;
+    margin-bottom:17px;
 }
+
 .question-title{
-  font-weight:bold;margin-bottom:13px;line-height:1.7
+    font-weight:bold;
+    margin-bottom:13px;
+    line-height:1.6;
 }
+
 .option{
-  display:block;padding:9px 10px;margin:5px 0;
-  border-radius:7px;cursor:pointer
+    display:block;
+    padding:9px 10px;
+    margin:5px 0;
+    border-radius:7px;
+    cursor:pointer;
 }
-.option:hover{background:#edf2f7}
-.option input{width:auto;margin-right:8px}
 
-.result-box{text-align:center}
+.option:hover{
+    background:#edf2f7;
+}
+
+.option input{
+    width:auto;
+    margin-right:8px;
+}
+
+/* ================= HASIL ================= */
+
+.result-box{
+    text-align:center;
+}
+
 .score{
-  font-size:55px;font-weight:bold;color:#102a43;margin:10px 0
+    font-size:55px;
+    font-weight:bold;
+    color:#102a43;
+    margin:10px 0;
 }
+
 .result-detail{
-  background:#f4f7fa;border-radius:12px;
-  padding:18px;margin-top:20px
+    background:#f4f7fa;
+    border-radius:12px;
+    padding:18px;
+    margin-top:20px;
 }
-.result-detail p{margin:8px 0}
+
+.result-detail p{
+    margin:8px 0;
+}
+
 .review-item{
-  border:1px solid #dce3ea;border-radius:10px;
-  padding:15px;margin-bottom:12px
-}
-.correct{color:#18794e;font-weight:bold}
-.wrong{color:#c0392b;font-weight:bold}
-
-.page{display:none}
-.page.active{display:block}
-
-/* ===== PECahan ===== */
-.pecahan{
-  display:inline-flex;
-  flex-direction:column;
-  vertical-align:middle;
-  text-align:center;
-  line-height:1.05;
-  margin:0 3px;
-  min-width:24px;
-}
-.pecahan .atas{
-  display:block;
-  border-bottom:1.5px solid #172033;
-  padding:0 5px 3px;
-}
-.pecahan .bawah{
-  display:block;
-  padding:3px 5px 0;
+    border:1px solid #dce3ea;
+    border-radius:10px;
+    padding:15px;
+    margin-bottom:12px;
 }
 
-#warningOverlay,#lockOverlay{
-  display:none;position:fixed;inset:0;
-  background:rgba(0,0,0,.78);z-index:99999;
-  align-items:center;justify-content:center;padding:20px
+.correct{
+    color:#18794e;
+    font-weight:bold;
 }
-.security-box{
-  background:white;width:100%;max-width:420px;
-  border-radius:16px;padding:25px;text-align:center;
-  box-shadow:0 10px 40px rgba(0,0,0,.35)
+
+.wrong{
+    color:#c0392b;
+    font-weight:bold;
 }
-.security-box h2{color:#102a43;margin-top:0}
-.security-box p{line-height:1.6}
-.security-box input{
-  width:100%;padding:12px;margin:12px 0;
-  border:1px solid #ccd5df;border-radius:9px;
-  font-size:16px;text-align:center
+
+/* ================= PAGE ================= */
+
+.page{
+    display:none;
 }
-.security-box button{
-  border:none;background:#102a43;color:white;
-  padding:12px 24px;border-radius:9px;
-  font-weight:bold;cursor:pointer
+
+.page.active{
+    display:block;
 }
-#passwordError{
-  display:none;color:#c0392b;margin-top:10px;font-size:14px
-}
+
+/* ================= MOBILE ================= */
 
 @media(max-width:650px){
-  .container{margin-top:10px}
-  .brand{gap:8px;padding:15px 10px}
-  .logo-img{width:55px;height:55px}
-  .header-title h1{font-size:15px}
-  .header-title h2{font-size:13px}
-  .header-title p{font-size:10px}
-  .info-grid{grid-template-columns:1fr}
-  .card{padding:18px}
+
+    .container{
+        margin-top:10px;
+    }
+
+    .brand{
+        gap:8px;
+        padding:15px 10px;
+    }
+
+    .logo-img{
+        width:55px;
+        height:55px;
+    }
+
+    .header-title h1{
+        font-size:15px;
+    }
+
+    .header-title h2{
+        font-size:13px;
+    }
+
+    .header-title p{
+        font-size:10px;
+    }
+
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+
+    .card{
+        padding:18px;
+    }
 }
+
+/* ================= PENGAMAN UJIAN ================= */
+#warningOverlay,#lockOverlay{
+display:none;position:fixed;inset:0;background:rgba(0,0,0,.78);
+z-index:99999;align-items:center;justify-content:center;padding:20px;
+}
+.security-box{
+background:white;width:100%;max-width:420px;border-radius:16px;padding:25px;
+text-align:center;box-shadow:0 10px 40px rgba(0,0,0,.35);
+}
+.security-box h2{color:#102a43;margin-top:0;}
+.security-box p{line-height:1.6;}
+.security-box input{
+width:100%;padding:12px;margin:12px 0;border:1px solid #ccd5df;
+border-radius:9px;font-size:16px;text-align:center;
+}
+.security-box button{
+border:none;background:#102a43;color:white;padding:12px 24px;
+border-radius:9px;font-weight:bold;cursor:pointer;
+}
+#passwordError{display:none;color:#c0392b;margin-top:10px;font-size:14px;}
+
 </style>
 </head>
 
 <body>
 
-<!-- ================= PENGAMAN ================= -->
 
+<!-- ================= PENGAMAN UJIAN ================= -->
 <div id="warningOverlay">
-  <div class="security-box">
-    <h2>⚠️ PERINGATAN</h2>
-    <p>
-      Kamu telah keluar dari halaman ujian.
-      <br><br>
-      <b>Ini adalah peringatan pertama.</b>
-      <br>
-      Jangan berpindah ke aplikasi atau halaman lain selama ujian.
-    </p>
-    <button type="button" onclick="closeWarning()">
-      KEMBALI KE UJIAN
-    </button>
-  </div>
+<div class="security-box">
+<h2>⚠️ PERINGATAN</h2>
+<p>
+Kamu telah keluar dari halaman ujian.
+<br><br>
+<b>Ini adalah peringatan pertama.</b>
+<br>
+Jangan berpindah ke aplikasi atau halaman lain selama ujian.
+</p>
+<button type="button" onclick="closeWarning()">KEMBALI KE UJIAN</button>
+</div>
 </div>
 
 <div id="lockOverlay">
-  <div class="security-box">
-    <h2>🔒 UJIAN TERKUNCI</h2>
-    <p>
-      Kamu telah keluar dari halaman ujian sebanyak <b>2 kali</b>.
-      <br><br>
-      Minta guru memasukkan password untuk melanjutkan.
-    </p>
-    <input type="password" id="teacherPassword"
-           placeholder="Password Guru" autocomplete="off">
-    <button type="button" onclick="unlockExam()">BUKA UJIAN</button>
-    <div id="passwordError">Password salah.</div>
-  </div>
+<div class="security-box">
+<h2>🔒 UJIAN TERKUNCI</h2>
+<p>
+Kamu telah keluar dari halaman ujian sebanyak <b>2 kali</b>.
+<br><br>
+Minta guru memasukkan password untuk melanjutkan.
+</p>
+<input type="password" id="teacherPassword" placeholder="Password Guru" autocomplete="off">
+<button type="button" onclick="unlockExam()">BUKA UJIAN</button>
+<div id="passwordError">Password salah.</div>
 </div>
+</div>
+
 
 <div class="container">
 
 <!-- ================= KOP ================= -->
 
 <div class="header">
-  <div class="brand">
 
-    <img src="logo-lamongan.png"
-         class="logo-img"
-         alt="Logo Lamongan">
+    <div class="brand">
 
-    <div class="header-title">
-      <h1>SUMATIF TENGAH SEMESTER GASAL</h1>
-      <h2>SDN 1 SENDANGREJO</h2>
-      <p>TAHUN PELAJARAN 2026/2027</p>
+        <img
+            src="logo-lamongan.png"
+            class="logo-img"
+            alt="Logo Lamongan"
+        >
+
+        <div class="header-title">
+
+            <h1>SUMATIF TENGAH SEMESTER GASAL</h1>
+
+            <h2>SDN 1 SENDANGREJO</h2>
+
+            <p>TAHUN PELAJARAN 2026/2027</p>
+
+        </div>
+
+        <img
+            src="logo-sekolah.png"
+            class="logo-img"
+            alt="Logo SDN 1 Sendangrejo"
+        >
+
     </div>
 
-    <img src="logo-sekolah.png"
-         class="logo-img"
-         alt="Logo SDN 1 Sendangrejo">
-
-  </div>
 </div>
 
 
-<!-- ================= HALAMAN AWAL ================= -->
+<!-- ===================================================== -->
+<!-- HALAMAN AWAL -->
+<!-- ===================================================== -->
 
 <div id="startPage" class="page active">
 
-  <div class="card welcome">
-    <h2>
-      Selamat Datang,
-      <span id="welcomeName">Peserta Didik!</span>
-    </h2>
+    <div class="card welcome">
 
-    <p>
-      Silakan pilih nomor absen untuk melanjutkan ujian.
-    </p>
-  </div>
+        <h2>
+            Selamat Datang,
+            <span id="welcomeName">Peserta Didik!</span>
+        </h2>
 
-  <div class="card">
-
-    <div class="info-grid">
-
-      <div class="info-box">
-        <strong>15</strong>
-        <span>Pilihan Ganda</span>
-      </div>
-
-      <div class="info-box">
-        <strong>10</strong>
-        <span>Isian Singkat</span>
-      </div>
-
-      <div class="info-box">
-        <strong>5</strong>
-        <span>Uraian</span>
-      </div>
+        <p>
+            Silakan pilih nomor absen untuk melanjutkan ujian.
+        </p>
 
     </div>
 
-    <div class="form-group">
-      <label for="absen">No. Absen</label>
 
-      <select id="absen" onchange="pilihAbsen()">
-        <option value="">-- Pilih No. Absen --</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-      </select>
+    <div class="card">
+
+        <div class="info-grid">
+
+            <div class="info-box">
+                <strong>15</strong>
+                <span>Pilihan Ganda</span>
+            </div>
+
+            <div class="info-box">
+                <strong>10</strong>
+                <span>Isian Singkat</span>
+            </div>
+
+            <div class="info-box">
+                <strong>5</strong>
+                <span>Uraian</span>
+            </div>
+
+        </div>
+
+
+        <!-- NO ABSEN -->
+
+        <div class="form-group">
+
+            <label for="absen">
+                No. Absen
+            </label>
+
+            <select id="absen" onchange="pilihAbsen()">
+
+                <option value="">
+                    -- Pilih No. Absen --
+                </option>
+
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+
+            </select>
+
+        </div>
+
+
+        <!-- NAMA OTOMATIS -->
+
+        <div class="form-group">
+
+            <label for="nama">
+                Nama Lengkap
+            </label>
+
+            <input
+                type="text"
+                id="nama"
+                readonly
+                placeholder="Nama akan muncul otomatis"
+            >
+
+        </div>
+
+
+        <!-- KELAS -->
+
+        <div class="form-group">
+
+            <label for="kelas">
+                Kelas / Fase
+            </label>
+
+            <select id="kelas" disabled>
+
+                <option value="IV / B">
+                    IV / B
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- MAPEL -->
+
+        <div class="form-group">
+
+            <label for="mapel">
+                Mata Pelajaran
+            </label>
+
+            <select id="mapel" disabled>
+
+                <option value="Pendidikan Pancasila">
+                    Pendidikan Pancasila
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div style="text-align:center;margin-top:25px;">
+
+            <button
+                class="btn btn-primary"
+                onclick="mulaiUjian()"
+            >
+                MULAI UJIAN
+            </button>
+
+        </div>
+
     </div>
 
-    <div class="form-group">
-      <label for="nama">Nama Lengkap</label>
-
-      <input type="text"
-             id="nama"
-             readonly
-             placeholder="Nama akan muncul otomatis">
-    </div>
-
-    <div class="form-group">
-      <label for="kelas">Kelas / Fase</label>
-
-      <select id="kelas" disabled>
-        <option value="IV / B">IV / B</option>
-      </select>
-    </div>
-
-    <div class="form-group">
-      <label for="mapel">Mata Pelajaran</label>
-
-      <select id="mapel" disabled>
-        <option value="Matematika">Matematika</option>
-      </select>
-    </div>
-
-    <div style="text-align:center;margin-top:25px">
-      <button class="btn btn-primary" onclick="mulaiUjian()">
-        MULAI UJIAN
-      </button>
-    </div>
-
-  </div>
 </div>
 
 
-<!-- ================= HALAMAN UJIAN ================= -->
+<!-- ===================================================== -->
+<!-- HALAMAN UJIAN -->
+<!-- ===================================================== -->
 
 <div id="examPage" class="page">
 
 <div class="card">
 
 <div class="progress-area">
-  <div class="progress-info">
-    <span id="progressText">0 / 30</span>
-    <span>Progress</span>
-  </div>
 
-  <div class="progress-bar">
-    <div id="progressFill" class="progress-fill"></div>
-  </div>
+    <div class="progress-info">
+
+        <span id="progressText">
+            0 / 30 soal terjawab
+        </span>
+
+        <span>
+            Progress
+        </span>
+
+    </div>
+
+    <div class="progress-bar">
+
+        <div
+            id="progressFill"
+            class="progress-fill"
+        ></div>
+
+    </div>
+
 </div>
 
 
 <form id="examForm">
 
+
 <!-- ===================================================== -->
 <!-- PILIHAN GANDA -->
-<!-- ===================================================== -->
 
 <h2>Pilihan Ganda</h2>
 
-
-<div class="question">
-<div class="question-title">
-1. Bilangan “empat ribu dua ratus tujuh belas”
-<br>
-jika ditulis dengan angka adalah ....
-</div>
-
-<label class="option">
-<input type="radio" name="q1" value="A">
-A. 4.127
-</label>
-
-<label class="option">
-<input type="radio" name="q1" value="B">
-B. 4.172
-</label>
-
-<label class="option">
-<input type="radio" name="q1" value="C">
-C. 4.217
-</label>
-
-<label class="option">
-<input type="radio" name="q1" value="D">
-D. 4.271
-</label>
-</div>
-
-
-<div class="question">
-<div class="question-title">
-2. Nilai angka 3 pada bilangan 6.385 adalah ....
-</div>
-
-<label class="option">
-<input type="radio" name="q2" value="A">
-A. 3
-</label>
-
-<label class="option">
-<input type="radio" name="q2" value="B">
-B. 30
-</label>
-
-<label class="option">
-<input type="radio" name="q2" value="C">
-C. 300
-</label>
-
-<label class="option">
-<input type="radio" name="q2" value="D">
-D. 3.000
-</label>
-</div>
-
-
-<div class="question">
-<div class="question-title">
-3. Urutan bilangan dari yang terkecil adalah ....
-<br>
-3.450, 3.405, 3.540, 3.504
-</div>
-
-<label class="option">
-<input type="radio" name="q3" value="A">
-A. 3.405, 3.450, 3.504, 3.540
-</label>
-
-<label class="option">
-<input type="radio" name="q3" value="B">
-B. 3.405, 3.504, 3.450, 3.540
-</label>
-
-<label class="option">
-<input type="radio" name="q3" value="C">
-C. 3.450, 3.405, 3.504, 3.540
-</label>
-
-<label class="option">
-<input type="radio" name="q3" value="D">
-D. 3.540, 3.504, 3.450, 3.405
-</label>
-</div>
-
-
-<div class="question">
-<div class="question-title">
-4. Perpustakaan memiliki 125 buku.
-<br>
-Kemudian mendapat 4 kotak buku.
-<br>
-Setiap kotak berisi 25 buku.
-<br>
-Jumlah buku sekarang adalah ....
-</div>
-
-<label class="option">
-<input type="radio" name="q4" value="A">
-A. 225
-</label>
-
-<label class="option">
-<input type="radio" name="q4" value="B">
-B. 325
-</label>
-
-<label class="option">
-<input type="radio" name="q4" value="C">
-C. 425
-</label>
-
-<label class="option">
-<input type="radio" name="q4" value="D">
-D. 525
-</label>
-</div>
-
-
-<div class="question">
-<div class="question-title">
-5. Ibu memiliki 96 permen dan membagikannya
-<br>
-sama banyak kepada 8 anak.
-<br>
-Setiap anak mendapat ....
-</div>
-
-<label class="option">
-<input type="radio" name="q5" value="A">
-A. 10
-</label>
-
-<label class="option">
-<input type="radio" name="q5" value="B">
-B. 11
-</label>
-
-<label class="option">
-<input type="radio" name="q5" value="C">
-C. 12
-</label>
-
-<label class="option">
-<input type="radio" name="q5" value="D">
-D. 14
-</label>
-</div>
-
-
-<div class="question">
-<div class="question-title">
-6. Berikut yang bukan merupakan faktor dari 24 adalah ....
-</div>
-
-<label class="option">
-<input type="radio" name="q6" value="A">
-A. 2
-</label>
-
-<label class="option">
-<input type="radio" name="q6" value="B">
-B. 3
-</label>
-
-<label class="option">
-<input type="radio" name="q6" value="C">
-C. 5
-</label>
-
-<label class="option">
-<input type="radio" name="q6" value="D">
-D. 6
-</label>
-</div>
-
-
-<div class="question">
-<div class="question-title">
-7. Perhatikan pola berikut:
-<br>
-6, 12, 18, 24, ....
-<br>
-Dua bilangan berikutnya adalah ....
-</div>
-
-<label class="option">
-<input type="radio" name="q7" value="A">
-A. 28 dan 34
-</label>
-
-<label class="option">
-<input type="radio" name="q7" value="B">
-B. 30 dan 36
-</label>
-
-<label class="option">
-<input type="radio" name="q7" value="C">
-C. 32 dan 38
-</label>
-
-<label class="option">
-<input type="radio" name="q7" value="D">
-D. 34 dan 40
-</label>
-</div>
-
-
-<div class="question">
-<div class="question-title">
-8. Sebuah kue dibagi menjadi 4 bagian sama besar.
-<br>
-Dita mengambil 1 bagian.
-<br>
-Pecahan kue yang diambil Dita adalah ....
-</div>
-
-<label class="option">
-<input type="radio" name="q8" value="A">
-A.
-<span class="pecahan">
-<span class="atas">1</span>
-<span class="bawah">4</span>
-</span>
-</label>
-
-<label class="option">
-<input type="radio" name="q8" value="B">
-B.
-<span class="pecahan">
-<span class="atas">1</span>
-<span class="bawah">3</span>
-</span>
-</label>
-
-<label class="option">
-<input type="radio" name="q8" value="C">
-C.
-<span class="pecahan">
-<span class="atas">2</span>
-<span class="bawah">4</span>
-</span>
-</label>
-
-<label class="option">
-<input type="radio" name="q8" value="D">
-D.
-<span class="pecahan">
-<span class="atas">3</span>
-<span class="bawah">4</span>
-</span>
-</label>
-</div>
-
-
-<div class="question">
-<div class="question-title">
-9. Urutan pecahan dari yang terkecil adalah ....
-<br>
-<span class="pecahan"><span class="atas">2</span><span class="bawah">7</span></span>,
-<span class="pecahan"><span class="atas">5</span><span class="bawah">7</span></span>,
-<span class="pecahan"><span class="atas">3</span><span class="bawah">7</span></span>,
-<span class="pecahan"><span class="atas">6</span><span class="bawah">7</span></span>
-</div>
-
-<label class="option">
-<input type="radio" name="q9" value="A">
-A.
-<span class="pecahan"><span class="atas">6</span><span class="bawah">7</span></span>,
-<span class="pecahan"><span class="atas">5</span><span class="bawah">7</span></span>,
-<span class="pecahan"><span class="atas">3</span><span class="bawah">7</span></span>,
-<span class="pecahan"><span class="atas">2</span><span class="bawah">7</span></span>
-</label>
-
-<label class="option">
-<input type="radio" name="q9" value="B">
-B.
-<span class="pecahan"><span class="atas">2</span><span class="bawah">7</span></span>,
-<span class="pecahan"><span class="atas">3</span><span class="bawah">7</span></span>,
-<span class="pecahan"><span class="atas">5</span><span class="bawah">7</span></span>,
-<span class="pecahan"><span class="atas">6</span><span class="bawah">7</span></span>
-</label>
-
-<label class="option">
-<input type="radio" name="q9" value="C">
-C.
-<span class="pecahan"><span class="atas">2</span><span class="bawah">7</span></span>,
-<span class="pecahan"><span class="atas">5</span><span class="bawah">7</span></span>,
-<span class="pecahan"><span class="atas">3</span><span class="bawah">7</span></span>,
-<span class="pecahan"><span class="atas">6</span><span class="bawah">7</span></span>
-</label>
-
-<label class="option">
-<input type="radio" name="q9" value="D">
-D.
-<span class="pecahan"><span class="atas">3</span><span class="bawah">7</span></span>,
-<span class="pecahan"><span class="atas">2</span><span class="bawah">7</span></span>,
-<span class="pecahan"><span class="atas">5</span><span class="bawah">7</span></span>,
-<span class="pecahan"><span class="atas">6</span><span class="bawah">7</span></span>
-</label>
-</div>
-
-
-<div class="question">
-<div class="question-title">
-10. Pecahan yang senilai dengan
-<span class="pecahan"><span class="atas">1</span><span class="bawah">2</span></span>
-adalah ....
-</div>
-
-<label class="option">
-<input type="radio" name="q10" value="A">
-A.
-<span class="pecahan"><span class="atas">1</span><span class="bawah">3</span></span>
-</label>
-
-<label class="option">
-<input type="radio" name="q10" value="B">
-B.
-<span class="pecahan"><span class="atas">2</span><span class="bawah">3</span></span>
-</label>
-
-<label class="option">
-<input type="radio" name="q10" value="C">
-C.
-<span class="pecahan"><span class="atas">2</span><span class="bawah">4</span></span>
-</label>
-
-<label class="option">
-<input type="radio" name="q10" value="D">
-D.
-<span class="pecahan"><span class="atas">3</span><span class="bawah">4</span></span>
-</label>
-</div>
-
-
-<div class="question">
-<div class="question-title">
-11. Manakah pecahan yang lebih besar?
-<br>
-<span class="pecahan"><span class="atas">3</span><span class="bawah">8</span></span>
-atau
-<span class="pecahan"><span class="atas">5</span><span class="bawah">8</span></span>
-</div>
-
-<label class="option">
-<input type="radio" name="q11" value="A">
-A.
-<span class="pecahan"><span class="atas">3</span><span class="bawah">8</span></span>
-</label>
-
-<label class="option">
-<input type="radio" name="q11" value="B">
-B.
-<span class="pecahan"><span class="atas">5</span><span class="bawah">8</span></span>
-</label>
-
-<label class="option">
-<input type="radio" name="q11" value="C">
-C. Keduanya sama
-</label>
-
-<label class="option">
-<input type="radio" name="q11" value="D">
-D. Tidak dapat ditentukan
-</label>
-</div>
-
-
-<div class="question">
-<div class="question-title">
-12. Ani memiliki 0,7 liter air.
-<br>
-Budi memiliki 0,5 liter air.
-<br>
-Siapa yang memiliki air lebih banyak?
-</div>
-
-<label class="option">
-<input type="radio" name="q12" value="A">
-A. Ani
-</label>
-<label class="option">
-<input type="radio" name="q12" value="B">
-B. Budi
-</label>
-<label class="option">
-<input type="radio" name="q12" value="C">
-C. Keduanya sama
-</label>
-<label class="option">
-<input type="radio" name="q12" value="D">
-D. Tidak dapat ditentukan
-</label>
-</div>
-
-
-<div class="question">
-<div class="question-title">
-13. Pecahan
-<span class="pecahan"><span class="atas">35</span><span class="bawah">100</span></span>
-jika ditulis dalam bentuk desimal adalah ....
-</div>
-
-<label class="option">
-<input type="radio" name="q13" value="A">
-A. 0,035
-</label>
-<label class="option">
-<input type="radio" name="q13" value="B">
-B. 0,35
-</label>
-<label class="option">
-<input type="radio" name="q13" value="C">
-C. 3,5
-</label>
-<label class="option">
-<input type="radio" name="q13" value="D">
-D. 35
-</label>
-</div>
-
-
-<div class="question">
-<div class="question-title">
-14. Pernyataan yang benar adalah ....
-</div>
-
-<label class="option">
-<input type="radio" name="q14" value="A">
-A. 0,4 &lt; 0,04
-</label>
-<label class="option">
-<input type="radio" name="q14" value="B">
-B. 0,4 = 0,40
-</label>
-<label class="option">
-<input type="radio" name="q14" value="C">
-C. 0,04 &gt; 0,4
-</label>
-<label class="option">
-<input type="radio" name="q14" value="D">
-D. 0,40 &lt; 0,4
-</label>
-</div>
-
-
-<div class="question">
-<div class="question-title">
-15. Dari 100 kelereng, 25 berwarna merah.
-<br>
-Persentase kelereng merah adalah ....
-</div>
-
-<label class="option">
-<input type="radio" name="q15" value="A">
-A. 15%
-</label>
-<label class="option">
-<input type="radio" name="q15" value="B">
-B. 20%
-</label>
-<label class="option">
-<input type="radio" name="q15" value="C">
-C. 24%
-</label>
-<label class="option">
-<input type="radio" name="q15" value="D">
-D. 25%
-</label>
-</div>
-
-
-<!-- ===================================================== -->
-<!-- ISIAN -->
-<!-- ===================================================== -->
+<div class="question"><div class="question-title">1. Dalam sidang BPUPKI, para tokoh menyampaikan gagasan tentang dasar negara. Sikap yang dapat kita teladani adalah ....</div>
+<label class="option"><input type="radio" name="q1" value="A"> A. mengutamakan kepentingan pribadi</label>
+<label class="option"><input type="radio" name="q1" value="B"> B. mengutamakan persatuan dan kepentingan bangsa</label>
+<label class="option"><input type="radio" name="q1" value="C"> C. memaksakan pendapat sendiri</label>
+<label class="option"><input type="radio" name="q1" value="D"> D. menghindari pembahasan bersama</label></div>
+
+<div class="question"><div class="question-title">2. Perhatikan pernyataan berikut!<br>1) Mempersiapkan hal-hal yang berkaitan dengan kemerdekaan Indonesia<br>2) Membahas dasar negara<br>3) Melanjutkan tugas setelah BPUPKI dibubarkan<br>4) Mengesahkan UUD 1945<br>Pernyataan yang berkaitan dengan PPKI adalah ....</div>
+<label class="option"><input type="radio" name="q2" value="A"> A. 1 dan 2</label>
+<label class="option"><input type="radio" name="q2" value="B"> B. 1 dan 3</label>
+<label class="option"><input type="radio" name="q2" value="C"> C. 2 dan 3</label>
+<label class="option"><input type="radio" name="q2" value="D"> D. 3 dan 4</label></div>
+
+<div class="question"><div class="question-title">3. Tokoh yang menyampaikan gagasan tentang dasar negara dalam sidang BPUPKI adalah ....</div>
+<label class="option"><input type="radio" name="q3" value="A"> A. Moh. Yamin, Soepomo, dan Ir. Soekarno</label>
+<label class="option"><input type="radio" name="q3" value="B"> B. Moh. Hatta, Ahmad Soebardjo, dan Ki Hajar Dewantara</label>
+<label class="option"><input type="radio" name="q3" value="C"> C. Jenderal Sudirman, Moh. Hatta, dan Soepomo</label>
+<label class="option"><input type="radio" name="q3" value="D"> D. Ki Hajar Dewantara, Moh. Yamin, dan Moh. Hatta</label></div>
+
+<div class="question"><div class="question-title">4. Tujuan para tokoh menyampaikan gagasan tentang dasar negara dalam sidang BPUPKI adalah ....</div>
+<label class="option"><input type="radio" name="q4" value="A"> A. memilih presiden Indonesia</label>
+<label class="option"><input type="radio" name="q4" value="B"> B. merumuskan dasar negara Indonesia</label>
+<label class="option"><input type="radio" name="q4" value="C"> C. membuat aturan sekolah</label>
+<label class="option"><input type="radio" name="q4" value="D"> D. menentukan pembagian wilayah</label></div>
+
+<div class="question"><div class="question-title">5. Panitia Sembilan dibentuk untuk membantu merumuskan dasar negara. Hasil penting dari Panitia Sembilan adalah ....</div>
+<label class="option"><input type="radio" name="q5" value="A"> A. Piagam Jakarta</label>
+<label class="option"><input type="radio" name="q5" value="B"> B. Sumpah Pemuda</label>
+<label class="option"><input type="radio" name="q5" value="C"> C. Proklamasi Kemerdekaan</label>
+<label class="option"><input type="radio" name="q5" value="D"> D. Dekrit Presiden</label></div>
+
+<div class="question"><div class="question-title">6. Perbedaan peran BPUPKI dan PPKI yang tepat adalah ....</div>
+<label class="option"><input type="radio" name="q6" value="A"> A. BPUPKI dibentuk setelah PPKI</label>
+<label class="option"><input type="radio" name="q6" value="B"> B. BPUPKI membahas persiapan kemerdekaan, sedangkan PPKI melanjutkan tugas setelah BPUPKI</label>
+<label class="option"><input type="radio" name="q6" value="C"> C. BPUPKI bertugas membuat peraturan sekolah</label>
+<label class="option"><input type="radio" name="q6" value="D"> D. PPKI hanya membahas pendidikan</label></div>
+
+<div class="question"><div class="question-title">7. Piagam Jakarta memiliki hubungan penting dengan Pancasila karena ....</div>
+<label class="option"><input type="radio" name="q7" value="A"> A. menjadi teks Proklamasi</label>
+<label class="option"><input type="radio" name="q7" value="B"> B. menjadi salah satu bahan penting dalam proses perumusan Pancasila</label>
+<label class="option"><input type="radio" name="q7" value="C"> C. menjadi nama organisasi pemuda</label>
+<label class="option"><input type="radio" name="q7" value="D"> D. menjadi lagu kebangsaan</label></div>
+
+<div class="question"><div class="question-title">8. Aturan yang dibuat secara resmi dan biasanya berbentuk dokumen disebut aturan ....</div>
+<label class="option"><input type="radio" name="q8" value="A"> A. tidak tertulis</label>
+<label class="option"><input type="radio" name="q8" value="B"> B. pribadi</label>
+<label class="option"><input type="radio" name="q8" value="C"> C. tertulis</label>
+<label class="option"><input type="radio" name="q8" value="D"> D. bebas</label></div>
+
+<div class="question"><div class="question-title">9. Contoh aturan tidak tertulis dalam kehidupan sehari-hari adalah ....</div>
+<label class="option"><input type="radio" name="q9" value="A"> A. tata tertib sekolah</label>
+<label class="option"><input type="radio" name="q9" value="B"> B. undang-undang</label>
+<label class="option"><input type="radio" name="q9" value="C"> C. menghormati orang yang lebih tua</label>
+<label class="option"><input type="radio" name="q9" value="D"> D. jadwal pelajaran</label></div>
+
+<div class="question"><div class="question-title">10. Rani melihat temannya membuang sampah sembarangan di kelas. Sikap Rani yang sesuai aturan adalah ....</div>
+<label class="option"><input type="radio" name="q10" value="A"> A. membiarkannya</label>
+<label class="option"><input type="radio" name="q10" value="B"> B. ikut membuang sampah sembarangan</label>
+<label class="option"><input type="radio" name="q10" value="C"> C. mengingatkan temannya untuk membuang sampah pada tempatnya</label>
+<label class="option"><input type="radio" name="q10" value="D"> D. mengejek temannya</label></div>
+
+<div class="question"><div class="question-title">11. Contoh kewajiban seorang siswa di sekolah adalah ....</div>
+<label class="option"><input type="radio" name="q11" value="A"> A. menaati tata tertib sekolah</label>
+<label class="option"><input type="radio" name="q11" value="B"> B. mendapat nilai tinggi tanpa belajar</label>
+<label class="option"><input type="radio" name="q11" value="C"> C. menggunakan fasilitas sekolah sesuka hati</label>
+<label class="option"><input type="radio" name="q11" value="D"> D. meminta semua keinginannya dipenuhi</label></div>
+
+<div class="question"><div class="question-title">12. Salah satu hak anak di rumah adalah ....</div>
+<label class="option"><input type="radio" name="q12" value="A"> A. membantu orang tua</label>
+<label class="option"><input type="radio" name="q12" value="B"> B. mendapatkan kasih sayang dari keluarga</label>
+<label class="option"><input type="radio" name="q12" value="C"> C. merapikan kamar</label>
+<label class="option"><input type="radio" name="q12" value="D"> D. menaati aturan keluarga</label></div>
+
+<div class="question"><div class="question-title">13. Hak dan kewajiban sebaiknya dilakukan secara seimbang. Contohnya adalah ....</div>
+<label class="option"><input type="radio" name="q13" value="A"> A. menuntut hak tetapi tidak mau menjalankan kewajiban</label>
+<label class="option"><input type="radio" name="q13" value="B"> B. belajar dengan sungguh-sungguh dan mendapatkan hak untuk belajar dengan nyaman</label>
+<label class="option"><input type="radio" name="q13" value="C"> C. menggunakan fasilitas sekolah sesuka hati</label>
+<label class="option"><input type="radio" name="q13" value="D"> D. meminta hak orang lain</label></div>
+
+<div class="question"><div class="question-title">14. Jika setiap anggota keluarga menjalankan kewajibannya, keadaan di rumah akan menjadi ....</div>
+<label class="option"><input type="radio" name="q14" value="A"> A. tidak teratur</label>
+<label class="option"><input type="radio" name="q14" value="B"> B. lebih tertib dan nyaman</label>
+<label class="option"><input type="radio" name="q14" value="C"> C. penuh pertengkaran</label>
+<label class="option"><input type="radio" name="q14" value="D"> D. semakin sulit</label></div>
+
+<div class="question"><div class="question-title">15. Ketika mengikuti musyawarah, pendapat kita berbeda dengan pendapat teman. Sikap yang tepat adalah ....</div>
+<label class="option"><input type="radio" name="q15" value="A"> A. memaksakan pendapat</label>
+<label class="option"><input type="radio" name="q15" value="B"> B. meninggalkan musyawarah</label>
+<label class="option"><input type="radio" name="q15" value="C"> C. menghargai pendapat dan mencari kesepakatan bersama</label>
+<label class="option"><input type="radio" name="q15" value="D"> D. marah kepada teman</label></div>
 
 <h2>Isian Singkat</h2>
-
-
-<div class="question">
-<div class="question-title">
-16. Bilangan 7.206 dibaca ....
-</div>
-<input type="text" name="q16">
-</div>
-
-
-<div class="question">
-<div class="question-title">
-17. Pada bilangan 8.472,
-<br>
-angka 8 menempati nilai tempat ....
-</div>
-<input type="text" name="q17">
-</div>
-
-
-<div class="question">
-<div class="question-title">
-18. Tuliskan salah satu faktor dari 36 selain 6!
-</div>
-<input type="text" name="q18">
-</div>
-
-
-<div class="question">
-<div class="question-title">
-19. Perhatikan kelipatan berikut:
-<br>
-4, 8, 12, 16, ....
-<br>
-Tuliskan dua bilangan berikutnya!
-</div>
-<input type="text" name="q19">
-</div>
-
-
-<div class="question">
-<div class="question-title">
-20. 24 kelereng dibagikan sama rata kepada 4 teman.
-<br>
-Setiap teman mendapat ... kelereng.
-</div>
-<input type="text" name="q20">
-</div>
-
-
-<div class="question">
-<div class="question-title">
-21. Sebuah benda dibagi menjadi 6 bagian sama besar.
-<br>
-Satu bagian dinyatakan dengan pecahan ....
-</div>
-<input type="text" name="q21">
-</div>
-
-
-<div class="question">
-<div class="question-title">
-22. Pecahan
-<span class="pecahan"><span class="atas">1</span><span class="bawah">3</span></span>
-senilai dengan ....
-</div>
-<input type="text" name="q22">
-</div>
-
-
-<div class="question">
-<div class="question-title">
-23. Pecahan
-<span class="pecahan"><span class="atas">7</span><span class="bawah">10</span></span>
-jika ditulis dalam bentuk desimal adalah ....
-</div>
-<input type="text" name="q23">
-</div>
-
-
-<div class="question">
-<div class="question-title">
-24. Bilangan desimal 0,45 sama dengan ... perseratus.
-</div>
-<input type="text" name="q24">
-</div>
-
-
-<div class="question">
-<div class="question-title">
-25. Dari 100 siswa, 40 siswa membawa bekal.
-<br>
-Persentase siswa yang membawa bekal adalah ....
-</div>
-<input type="text" name="q25">
-</div>
-
-
-<!-- ===================================================== -->
-<!-- URAIAN -->
-<!-- ===================================================== -->
+<div class="question"><div class="question-title">16. Badan yang dibentuk untuk mempersiapkan kemerdekaan Indonesia dan membahas dasar negara adalah ....</div><input type="text" name="q16"></div>
+<div class="question"><div class="question-title">17. Badan yang melanjutkan tugas BPUPKI setelah dibubarkan adalah ....</div><input type="text" name="q17"></div>
+<div class="question"><div class="question-title">18. Panitia yang beranggotakan sembilan orang dan merumuskan Piagam Jakarta disebut Panitia ....</div><input type="text" name="q18"></div>
+<div class="question"><div class="question-title">19. Hasil penting dari Panitia Sembilan adalah ....</div><input type="text" name="q19"></div>
+<div class="question"><div class="question-title">20. Dasar negara Indonesia adalah ....</div><input type="text" name="q20"></div>
+<div class="question"><div class="question-title">21. Aturan yang dibuat secara resmi dan biasanya memiliki bentuk dokumen disebut aturan ....</div><input type="text" name="q21"></div>
+<div class="question"><div class="question-title">22. Aturan yang tidak dibuat dalam bentuk tulisan tetapi tetap dipatuhi disebut aturan ....</div><input type="text" name="q22"></div>
+<div class="question"><div class="question-title">23. Sesuatu yang seharusnya kita terima disebut ....</div><input type="text" name="q23"></div>
+<div class="question"><div class="question-title">24. Sesuatu yang harus kita lakukan dengan penuh tanggung jawab disebut ....</div><input type="text" name="q24"></div>
+<div class="question"><div class="question-title">25. Mematuhi tata tertib dan mengerjakan tugas merupakan contoh kewajiban di ....</div><input type="text" name="q25"></div>
 
 <h2>Uraian</h2>
+<div class="question"><div class="question-title">26. Mengapa para tokoh perumus Pancasila perlu mengutamakan persatuan dan kepentingan bangsa? Jelaskan!</div><textarea name="q26" rows="5"></textarea></div>
+<div class="question"><div class="question-title">27. Jelaskan peran BPUPKI dan PPKI dalam proses persiapan kemerdekaan Indonesia!</div><textarea name="q27" rows="5"></textarea></div>
+<div class="question"><div class="question-title">28. Mengapa kita harus menjalankan kewajiban sebelum menuntut hak? Berikan satu contoh dalam kehidupan sehari-hari!</div><textarea name="q28" rows="5"></textarea></div>
+<div class="question"><div class="question-title">29. Jelaskan mengapa aturan perlu dipatuhi di sekolah!</div><textarea name="q29" rows="5"></textarea></div>
+<div class="question"><div class="question-title">30. Jelaskan hubungan antara hak dan kewajiban dalam kehidupan sehari-hari. Berikan satu contoh!</div><textarea name="q30" rows="6"></textarea></div>
 
-
-<div class="question">
-<div class="question-title">
-26. Bandingkan bilangan 4.275 dan 4.257.
-<br>
-Bilangan manakah yang lebih besar?
-<br>
-Jelaskan alasanmu!
+<div style="text-align:center;margin-top:30px;">
+<button type="button" class="btn btn-success" onclick="kumpulkanUjian()">KUMPULKAN JAWABAN</button>
 </div>
-<textarea name="q26" rows="5"></textarea>
-</div>
-
-
-<div class="question">
-<div class="question-title">
-27. Sebuah sekolah memiliki 6 kotak pensil.
-<br>
-Setiap kotak berisi 24 pensil.
-<br>
-Semua pensil dibagikan sama rata kepada 8 kelas.
-<br>
-Berapa pensil yang diterima setiap kelas?
-</div>
-<textarea name="q27" rows="5"></textarea>
-</div>
-
-
-<div class="question">
-<div class="question-title">
-28. Ibu memiliki 20 kelereng.
-<br>
-Kelereng tersebut ingin dimasukkan ke beberapa kelompok
-<br>
-dengan jumlah yang sama banyak.
-<br>
-Tuliskan semua kemungkinan jumlah kelereng dalam setiap kelompok!
-</div>
-<textarea name="q28" rows="5"></textarea>
-</div>
-
-
-<div class="question">
-<div class="question-title">
-29. Jelaskan mengapa
-<span class="pecahan"><span class="atas">1</span><span class="bawah">2</span></span>,
-<span class="pecahan"><span class="atas">2</span><span class="bawah">4</span></span>,
-dan
-<span class="pecahan"><span class="atas">3</span><span class="bawah">6</span></span>
-merupakan pecahan yang senilai!
-</div>
-<textarea name="q29" rows="5"></textarea>
-</div>
-
-
-<div class="question">
-<div class="question-title">
-30. Dari 100 siswa, terdapat 35 siswa yang membawa bekal.
-<br>
-Tuliskan keadaan tersebut dalam bentuk:
-<br>
-a. Pecahan
-<br>
-b. Desimal
-<br>
-c. Persentase
-</div>
-<textarea name="q30" rows="6"></textarea>
-</div>
-
-
-<div style="text-align:center;margin-top:30px">
-<button type="button"
-        class="btn btn-success"
-        onclick="kumpulkanUjian()">
-KUMPULKAN JAWABAN
-</button>
-</div>
-
 </form>
 </div>
 </div>
 
-
-<!-- ================= HASIL ================= -->
+<!-- HASIL -->
+<!-- ===================================================== -->
 
 <div id="resultPage" class="page">
 
@@ -1017,7 +738,9 @@ KUMPULKAN JAWABAN
 
 <p id="resultName"></p>
 
-<div class="score" id="finalScore">0</div>
+<div class="score" id="finalScore">
+0
+</div>
 
 <p>Nilai Akhir</p>
 
@@ -1039,11 +762,16 @@ KUMPULKAN JAWABAN
 </p>
 
 </div>
+
 </div>
 
+
 <div class="card">
+
 <h2>Review Jawaban</h2>
+
 <div id="review"></div>
+
 </div>
 
 </div>
@@ -1058,7 +786,7 @@ FORM SPREE
 ========================================================= */
 
 const FORMSPREE_ENDPOINT =
-"GANTI_DENGAN_ENDPOINT_FORMSPREE";
+"https://formspree.io/f/mljdrwrz";
 
 
 /* =========================================================
@@ -1066,16 +794,27 @@ DATA SISWA
 ========================================================= */
 
 const siswa = {
+
 "1":"Achmad Naufal Putra Yulianto",
+
 "2":"Aldo Syarul Ramdhan",
+
 "3":"Danish Raffa Faizan",
+
 "4":"Fabian Arrafif",
+
 "5":"Meli Anggraini",
+
 "6":"Muhammad Daffa Al Baihaqi",
+
 "7":"Nadhira Azkadina Putri",
+
 "8":"Nur Azizah",
+
 "9":"Raffasya Ali Alfarizqi",
+
 "10":"Assyfa Putri Zahrany"
+
 };
 
 
@@ -1084,21 +823,9 @@ KUNCI PG
 ========================================================= */
 
 const kunciPG = {
-q1:"C",
-q2:"C",
-q3:"A",
-q4:"A",
-q5:"C",
-q6:"C",
-q7:"B",
-q8:"A",
-q9:"B",
-q10:"C",
-q11:"B",
-q12:"A",
-q13:"B",
-q14:"B",
-q15:"D"
+q1:"B", q2:"D", q3:"A", q4:"B", q5:"A",
+q6:"B", q7:"B", q8:"C", q9:"C", q10:"C",
+q11:"A", q12:"B", q13:"B", q14:"B", q15:"C"
 };
 
 
@@ -1107,56 +834,16 @@ KUNCI ISIAN
 ========================================================= */
 
 const kunciIsian = {
-
-q16:[
-"tujuh ribu dua ratus enam"
-],
-
-q17:[
-"ribuan"
-],
-
-q18:[
-"1","2","3","4","9","12","18","36"
-],
-
-q19:[
-"20 dan 24",
-"20, 24"
-],
-
-q20:[
-"6",
-"6 kelereng"
-],
-
-q21:[
-"1/6",
-"⅙"
-],
-
-q22:[
-"2/6",
-"4/12",
-"3/9"
-],
-
-q23:[
-"0,7",
-"0.7"
-],
-
-q24:[
-"45",
-"45 perseratus"
-],
-
-q25:[
-"40%",
-"40 persen",
-"40"
-]
-
+q16:["bpupki","badan penyelidik usaha usaha persiapan kemerdekaan indonesia","badan penyelidik usaha-usaha persiapan kemerdekaan indonesia"],
+q17:["ppki","panitia persiapan kemerdekaan indonesia"],
+q18:["sembilan","panitia sembilan"],
+q19:["piagam jakarta","piagam djakarta"],
+q20:["pancasila"],
+q21:["tertulis"],
+q22:["tidak tertulis","tidaktertulis"],
+q23:["hak"],
+q24:["kewajiban"],
+q25:["sekolah"]
 };
 
 
@@ -1165,42 +852,46 @@ RUBRIK URAIAN
 ========================================================= */
 
 const rubrikUraian = {
-
 q26:[
-["4.275","4275"],
-["lebih besar"],
-["puluhan","satuan","nilai tempat"]
+["persatuan","bersatu","tetap bersatu"],
+["kepentingan bangsa","kepentingan bersama"],
+["mencegah perpecahan","tidak terjadi perpecahan"],
+["tujuan bersama","cita-cita bersama"],
+["musyawarah","kesepakatan"],
+["Indonesia kuat","keutuhan Indonesia"]
 ],
-
 q27:[
-["144","6 x 24","6 × 24"],
-["18","144 dibagi 8","144 : 8"],
-["18 pensil","setiap kelas"]
+["bpupki"],
+["membahas dasar negara","merumuskan dasar negara"],
+["mempersiapkan kemerdekaan","persiapan kemerdekaan"],
+["ppki"],
+["melanjutkan tugas bpupki","melanjutkan tugas setelah bpupki"],
+["mengesahkan uud 1945","mengesahkan uud"]
 ],
-
 q28:[
-["1"],
-["2"],
-["4"],
-["5"],
-["10"],
-["20"]
+["menjalankan kewajiban","melaksanakan kewajiban"],
+["sebelum menuntut hak","terlebih dahulu menjalankan kewajiban"],
+["tanggung jawab"],
+["belajar","mengerjakan tugas"],
+["kemudian bermain","setelah kewajiban"],
+["membantu orang tua","merapikan kamar","mengerjakan tugas sekolah"]
 ],
-
 q29:[
-["1/2"],
-["2/4"],
-["3/6"],
-["senilai","sama nilai","sama besar"],
-["setengah"]
+["menaati aturan","mematuhi aturan"],
+["tertib","ketertiban"],
+["nyaman","kenyamanan"],
+["belajar dengan baik","kegiatan belajar"],
+["kebersihan","bersih"],
+["tanggung jawab"]
 ],
-
 q30:[
-["35/100","35 / 100"],
-["0,35","0.35"],
-["35%","35 persen"]
+["hak dan kewajiban","hak serta kewajiban"],
+["seimbang","keseimbangan"],
+["menjalankan kewajiban","melaksanakan kewajiban"],
+["mendapatkan hak","menerima hak"],
+["hak belajar","belajar"],
+["mengerjakan tugas","menaati aturan","membantu orang tua"]
 ]
-
 };
 
 
@@ -1221,15 +912,18 @@ document.getElementById("welcomeName");
 
 if(absen && siswa[absen]){
 
-nama.value=siswa[absen];
+nama.value =
+siswa[absen];
 
-welcome.textContent=siswa[absen];
+welcome.textContent =
+siswa[absen];
 
 }else{
 
 nama.value="";
 
-welcome.textContent="Peserta Didik!";
+welcome.textContent =
+"Peserta Didik!";
 
 }
 
@@ -1255,6 +949,7 @@ alert(
 );
 
 return;
+
 }
 
 if(!nama){
@@ -1262,6 +957,7 @@ if(!nama){
 alert("Nama belum muncul.");
 
 return;
+
 }
 
 document
@@ -1293,6 +989,7 @@ document.getElementById("examForm");
 
 let answered=0;
 
+
 for(let i=1;i<=15;i++){
 
 const checked =
@@ -1304,6 +1001,7 @@ if(checked) answered++;
 
 }
 
+
 for(let i=16;i<=30;i++){
 
 const input =
@@ -1311,22 +1009,28 @@ form.querySelector(
 `[name="q${i}"]`
 );
 
-if(input && input.value.trim()!==""){
+if(input &&
+input.value.trim()!==""){
+
 answered++;
+
 }
 
 }
+
 
 const persen =
 (answered/30)*100;
 
 document
 .getElementById("progressText")
-.textContent=`${answered} / 30`;
+.textContent =
+`${answered} / 30 soal terjawab`;
 
 document
 .getElementById("progressFill")
-.style.width=persen+"%";
+.style.width =
+persen+"%";
 
 }
 
@@ -1356,7 +1060,7 @@ normalisasi(jawaban);
 
 return kunci.some(
 item =>
-j===normalisasi(item)
+j === normalisasi(item)
 );
 
 }
@@ -1384,7 +1088,9 @@ normalisasi(kata)
 );
 
 if(ditemukan){
+
 poin++;
+
 }
 
 });
@@ -1407,7 +1113,8 @@ confirm(
 
 if(!konfirmasi) return;
 
-examSubmitted=true;
+    examSubmitted = true;
+
 
 const form =
 document.getElementById("examForm");
@@ -1432,10 +1139,12 @@ form.querySelector(
 
 if(
 jawaban &&
-jawaban.value===
+jawaban.value ===
 kunciPG[`q${i}`]
 ){
+
 pgBenar++;
+
 }
 
 }
@@ -1462,7 +1171,9 @@ input.value,
 kunciIsian[`q${i}`]
 )
 ){
+
 isianBenar++;
+
 }
 
 }
@@ -1474,6 +1185,7 @@ const nilaiIsian =
 /* URAIAN */
 
 let totalUraianPoin=0;
+
 let totalMaksimalUraian=0;
 
 for(let i=26;i<=30;i++){
@@ -1496,6 +1208,7 @@ totalMaksimalUraian +=
 rubrik.length;
 
 }
+
 
 const nilaiUraian =
 (totalUraianPoin/
@@ -1524,35 +1237,34 @@ document
 
 document
 .getElementById("resultName")
-.textContent=
+.textContent =
 `${nama} • No. Absen ${absen}`;
 
 document
 .getElementById("finalScore")
-.textContent=
+.textContent =
 nilaiAkhir;
 
 document
 .getElementById("pgBenar")
-.textContent=
+.textContent =
 pgBenar;
 
 document
 .getElementById("isianBenar")
-.textContent=
+.textContent =
 isianBenar;
 
 document
 .getElementById("uraianPoin")
-.textContent=
+.textContent =
 totalUraianPoin;
+
 
 buatReview();
 
 
-/* =========================================================
-KIRIM FORMSPREE
-========================================================= */
+/* KIRIM FORMSPREE */
 
 const dataJawaban={};
 
@@ -1566,7 +1278,9 @@ form.querySelector(
 );
 
 dataJawaban[`soal_${i}`] =
-checked ? checked.value : "";
+checked
+?checked.value
+:"";
 
 }else{
 
@@ -1576,11 +1290,14 @@ form.querySelector(
 );
 
 dataJawaban[`soal_${i}`] =
-input ? input.value : "";
+input
+?input.value
+:"";
 
 }
 
 }
+
 
 try{
 
@@ -1594,6 +1311,7 @@ FORMSPREE_ENDPOINT &&
 await fetch(
 FORMSPREE_ENDPOINT,
 {
+
 method:"POST",
 
 headers:{
@@ -1612,7 +1330,7 @@ no_absen:absen,
 
 kelas_fase:"IV / B",
 
-mata_pelajaran:"Matematika",
+mata_pelajaran:"Pendidikan Pancasila",
 
 nilai:nilaiAkhir,
 
@@ -1638,6 +1356,7 @@ jawaban:
 JSON.stringify(dataJawaban)
 
 })
+
 }
 );
 
@@ -1651,6 +1370,7 @@ error
 );
 
 }
+
 
 window.scrollTo({
 top:0,
@@ -1688,13 +1408,14 @@ checked
 :"Tidak dijawab";
 
 const benar =
-jawaban===
+jawaban ===
 kunciPG[`q${i}`];
 
 const div =
 document.createElement("div");
 
-div.className="review-item";
+div.className =
+"review-item";
 
 div.innerHTML=`
 
@@ -1729,12 +1450,15 @@ form.querySelector(
 );
 
 const jawaban =
-input ? input.value : "";
+input
+?input.value
+:"";
 
 const div =
 document.createElement("div");
 
-div.className="review-item";
+div.className =
+"review-item";
 
 div.innerHTML=`
 
@@ -1760,9 +1484,7 @@ review.appendChild(div);
 }
 
 
-/* =========================================================
-UPDATE PROGRESS
-========================================================= */
+/* UPDATE PROGRESS */
 
 document.addEventListener(
 "change",
@@ -1778,213 +1500,91 @@ updateProgress
 /* =========================================================
 PENGAMAN UJIAN
 ========================================================= */
+const TEACHER_PASSWORD = "vascodagama";
+let warningCount = 0;
+let examLocked = false;
+let examSubmitted = false;
 
-const TEACHER_PASSWORD="vascodagama";
+document.addEventListener("visibilitychange", function(){
+    if(!document.hidden) return;
+    const examPage = document.getElementById("examPage");
+    if(!examPage || !examPage.classList.contains("active")) return;
+    if(examLocked || examSubmitted) return;
 
-let warningCount=0;
-let examLocked=false;
-let examSubmitted=false;
+    warningCount++;
 
-
-document.addEventListener(
-"visibilitychange",
-function(){
-
-if(!document.hidden) return;
-
-const examPage =
-document.getElementById("examPage");
-
-if(
-!examPage ||
-!examPage.classList.contains("active")
-)return;
-
-if(examLocked || examSubmitted)
-return;
-
-warningCount++;
-
-if(warningCount===1){
-
-document
-.getElementById("warningOverlay")
-.style.display="flex";
-
-}else{
-
-lockExam();
-
-}
-
+    if(warningCount === 1){
+        document.getElementById("warningOverlay").style.display = "flex";
+    }else{
+        lockExam();
+    }
 });
-
 
 function closeWarning(){
-
-document
-.getElementById("warningOverlay")
-.style.display="none";
-
+    document.getElementById("warningOverlay").style.display = "none";
 }
-
 
 function lockExam(){
-
-examLocked=true;
-
-document
-.getElementById("lockOverlay")
-.style.display="flex";
-
-setTimeout(function(){
-
-const p =
-document.getElementById("teacherPassword");
-
-if(p)p.focus();
-
-},300);
-
+    examLocked = true;
+    document.getElementById("lockOverlay").style.display = "flex";
+    setTimeout(function(){
+        const p = document.getElementById("teacherPassword");
+        if(p) p.focus();
+    },300);
 }
-
 
 function unlockExam(){
+    const input = document.getElementById("teacherPassword");
+    const error = document.getElementById("passwordError");
 
-const input =
-document.getElementById("teacherPassword");
-
-const error =
-document.getElementById("passwordError");
-
-if(
-input.value.trim()===
-TEACHER_PASSWORD
-){
-
-examLocked=false;
-
-document
-.getElementById("lockOverlay")
-.style.display="none";
-
-input.value="";
-
-error.style.display="none";
-
-}else{
-
-error.style.display="block";
-
-input.value="";
-
-input.focus();
-
+    if(input.value.trim() === TEACHER_PASSWORD){
+        examLocked = false;
+        document.getElementById("lockOverlay").style.display = "none";
+        input.value = "";
+        error.style.display = "none";
+    }else{
+        error.style.display = "block";
+        input.value = "";
+        input.focus();
+    }
 }
 
-}
+document.addEventListener("keydown", function(e){
+    const overlay = document.getElementById("lockOverlay");
+    if(e.key === "Enter" && overlay && overlay.style.display === "flex"){
+        unlockExam();
+        return;
+    }
 
+    if(e.ctrlKey && ["c","x","u"].includes(e.key.toLowerCase())){
+        e.preventDefault();
+    }
 
-/* =========================================================
-BLOKIR COPY / CUT / F12
-========================================================= */
-
-document.addEventListener(
-"keydown",
-function(e){
-
-const overlay =
-document.getElementById("lockOverlay");
-
-if(
-e.key==="Enter" &&
-overlay &&
-overlay.style.display==="flex"
-){
-
-unlockExam();
-return;
-
-}
-
-if(
-e.ctrlKey &&
-["c","x","u"].includes(
-e.key.toLowerCase()
-)
-){
-
-e.preventDefault();
-
-}
-
-if(e.key==="F12"){
-
-e.preventDefault();
-
-}
-
+    if(e.key === "F12"){
+        e.preventDefault();
+    }
 });
 
+document.addEventListener("copy",function(e){e.preventDefault();});
+document.addEventListener("cut",function(e){e.preventDefault();});
 
-document.addEventListener(
-"copy",
-function(e){
-e.preventDefault();
-}
-);
-
-document.addEventListener(
-"cut",
-function(e){
-e.preventDefault();
-}
-);
-
-document.addEventListener(
-"paste",
-function(e){
-
-const target=e.target;
-
-if(
-target.tagName!=="INPUT" &&
-target.tagName!=="TEXTAREA"
-){
-
-e.preventDefault();
-
-}
-
+document.addEventListener("paste",function(e){
+    const target=e.target;
+    if(target.tagName!=="INPUT" && target.tagName!=="TEXTAREA"){
+        e.preventDefault();
+    }
 });
 
+document.addEventListener("contextmenu",function(e){
+    e.preventDefault();
+});
 
-document.addEventListener(
-"contextmenu",
-function(e){
-e.preventDefault();
-}
-);
-
-
-window.addEventListener(
-"beforeunload",
-function(e){
-
-const examPage =
-document.getElementById("examPage");
-
-if(
-examPage &&
-examPage.classList.contains("active") &&
-!examSubmitted
-){
-
-e.preventDefault();
-e.returnValue="";
-
-}
-
+window.addEventListener("beforeunload",function(e){
+    const examPage=document.getElementById("examPage");
+    if(examPage && examPage.classList.contains("active") && !examSubmitted){
+        e.preventDefault();
+        e.returnValue="";
+    }
 });
 
 </script>
